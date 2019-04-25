@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudListTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleMateriais['materiais.title.'.concat(param['status'])]}" />
+		<ui:param name="prefixParam" value="uList" />
+		<ui:param name="collectionParam" value="#{materiaisController.list}" />
+		<ui:param name="entityParam" value="#{materiaisController.entity}" />
+		<ui:param name="editPageParam" value="materiaisEdit.xhtml?status=#{listStatus}&amp;faces-redirect=true" />
+		<ui:param name="viewPageParam" value="materiaisView.xhtml?status=#{listStatus}&amp;faces-redirect=true" />
+		<ui:param name="deleteActionParam" value="#{materiaisController.delete()}" />
+		<ui:param name="addActionParam" value="#{materiaisController.add()}" />
+		<ui:param name="header" value="#{titleParam}" />
+		<ui:param name="renderedView" value="#{!registro.editavel}" />
+		<ui:param name="renderedEdit" value="#{registro.editavel}" />
+		<ui:param name="visibilityEdit" value="#{true}" />
+		<ui:param name="disabledAdd" value="#{true}" />
+		<ui:param name="lazy" value="#{true}" />
+		<ui:param name="total" value="#{materiaisController.total}" />
+		<ui:param name="disabledDelete" value="#{!registro.removivel}" />
+		<ui:define name="datatableColumns">
+			<f:event type="preRenderView" listener="#{navegacaoController.checkStatusSession}" />
+			<f:event type="preRenderView" listener="#{materiaisController.pageLoad}" />
+			
+			<p:column style="width:65px;text-align:center" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}" 
+						headerText="#{bundleMateriais['materiais.datatable.ncode']}" 
+						sortBy="#{M--NCODE}" 
+						filterBy="#{M--NCODE}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.ncode}" />
+    		</p:column>
+    		
+    		<p:column style="width:50px;text-align:center"  
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}" 
+						headerText="#{bundleMateriais['materiais.datatable.tipo']}" 
+						sortBy="#{TIPO}" 
+						filterBy="#{TIPO}" 
+						filterStyleClass="filterStyle">
+					<f:facet name="filter">
+						<p:selectOneMenu onchange="PF('uListdt').filter()">
+		                    <f:selectItem itemLabel="" itemValue="" noSelectionOption="true" />
+		                    <f:selectItem itemLabel="MAKE" itemValue="MAKE"  />
+		                    <f:selectItem itemLabel="BUY" itemValue="BUY" />
+		                </p:selectOneMenu>
+		            </f:facet>
+        		<h:outputText value="#{registro.tipo.value}" />
+    		</p:column>
+    		
+    		<p:column style="width:90px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}" 
+						headerText="#{bundleMateriais['materiais.datatable.tecnologia']}" 
+						sortBy="#{TEC--TECNOLOGIA}" 
+						filterBy="#{TEC--TECNOLOGIA}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.categoria.tecnologia}" />
+    		</p:column>
+    		
+    		<p:column style="width:100px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}" 
+						headerText="#{bundleMateriais['materiais.datatable.categoria']}" 
+						sortBy="#{CAT--CATEGORIA}" 
+						filterBy="#{CAT--CATEGORIA}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.categoria}" />
+    		</p:column>
+    		
+    		<p:column style="width:250px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.pn']}" 
+						sortBy="#{PN}" 
+						filterBy="#{PN}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.pn}" />
+    		</p:column>
+
+    		<p:column style="width:250px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.material']}" 
+						sortBy="#{M--MATERIAL}" 
+						filterBy="#{M--MATERIAL}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.material}" />
+    		</p:column>
+    		
+    		<p:column style="width:250px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.materialpt']}" 
+						sortBy="#{M--DESCRICAO_PT}" 
+						filterBy="#{M--DESCRICAO_PT}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.descricaoPT}" />
+    		</p:column>
+
+			<p:column style="width:150px" 
+						headerText="#{bundleMateriais['materiais.datatable.autor']}" 
+						sortBy="#{USER--USUARIO}" 
+						filterBy="#{USER--USUARIO}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.criador}" />
+    		</p:column>
+    		
+    		<p:column style="width:300px"
+    					rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}" 
+						headerText="#{bundleMateriais['materiais.datatable.fornecedor']}" 
+						sortBy="#{FORN--FORNECEDOR}" 
+						filterBy="#{FORN--FORNECEDOR}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.fornecedor}" />
+    		</p:column>
+    		
+    		<p:column style="width:250px" 
+    					rendered="#{(sec:ifAreAllGranted('Administrador, Projetos, Gerente Projeto, Compras, Qualidade'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.processoEspecial1']}"
+						sortBy="#{PE--PROCESSO}" 
+						exportable="false"  
+						filterBy="#{PE--PROCESSO}" 
+						filterStyleClass="filterStyle">
+						<h:outputText value="#{registro.processosEspeciais[0]}" /><br/>
+						<h:outputText value="#{registro.processosEspeciais[1]}" /><br/>
+						<h:outputText value="#{registro.processosEspeciais[2]}" />
+    		</p:column>
+    		
+    		<p:column style="display:none" 
+    					exportable="true">
+						<h:outputText value="#{registro.processosEspeciais[0]} #{registro.processosEspeciais[1]} #{registro.processosEspeciais[2]}" />
+    		</p:column>
+    		
+    		<p:column style="width:400px" 
+    					rendered="#{(sec:ifAreAllGranted('Administrador, Projetos, Gerente Projeto, Compras, Qualidade'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.informacaoAlternativa']}"
+						sortBy="#{MI--PN_ALTERNATIVO}" 
+						exportable="false"  
+						filterBy="#{MI--PN_ALTERNATIVO}" 
+						filterStyleClass="filterStyle">
+						<ui:repeat var="o" value="#{registro.informacoesAlternativas}" varStatus="status">
+							<h:outputText value="#{o}" /><br/>
+						</ui:repeat>
+    		</p:column>
+    		
+    		<p:column style="display:none" 
+    					exportable="true">
+						<h:outputText value="#{registro.informacoesAlternativasAsString}" />
+    		</p:column>
+     		
+			<p:column style="width:250px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Projetos, Gerente Projeto, Compras, Qualidade'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.especificacao']}" 
+						sortBy="#{M--ESPECIFICACAO}" 
+						filterBy="#{M--ESPECIFICACAO}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.especificacao}" />
+    		</p:column>
+    		
+    		<p:column style="width:250px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Projetos, Gerente Projeto, Compras, Qualidade'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.pnfornecedor']}" 
+						sortBy="#{M--PN_FORNECEDOR}" 
+						filterBy="#{M--PN_FORNECEDOR}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.pnFornecedor}" />
+    		</p:column>
+    		
+    		<p:column  style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Projetos, Gerente Projeto'))}"  
+						headerText="#{bundleMateriais['materiais.datatable.peso']}" 
+						sortBy="#{M--PESO}" 
+						filterBy="#{M--PESO}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.peso}" />
+    		</p:column>
+    		
+    		<p:column  style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Compras'))}"
+						headerText="#{bundleMateriais['materiais.datatable.unidadeFornecedor']}" 
+						sortBy="#{UF--UNIDADE}" 
+						filterBy="#{UF--UNIDADE}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.unidadeFornecedor}" />
+    		</p:column>
+    		
+    		<p:column style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Compras'))}"
+						headerText="#{bundleMateriais['materiais.datatable.loteMinimo']}" 
+						sortBy="#{M--LOTE}" 
+						filterBy="#{M--LOTE}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.lote}" />
+    		</p:column>
+    		
+    		<p:column  style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Compras'))}"
+						headerText="#{bundleMateriais['materiais.datatable.unidadeLoteFornecedor']}" 
+						sortBy="#{ULF--UNIDADE}" 
+						filterBy="#{ULF--UNIDADE}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.unidadeLoteFornecedor}" />
+    		</p:column>
+    		
+    		<p:column  style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Compras'))}"
+						headerText="#{bundleMateriais['materiais.datatable.classeCompra']}" 
+						sortBy="#{M--CLASSE_COMPRA}" 
+						filterBy="#{M--CLASSE_COMPRA}" 
+						filterStyleClass="filterStyle">
+					<f:facet name="filter">
+						<p:selectOneMenu onchange="PF('uListdt').filter()">
+		                    <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
+		                    <f:selectItem itemLabel="A" itemValue="A"  />
+		                    <f:selectItem itemLabel="B" itemValue="B" />
+		                    <f:selectItem itemLabel="C" itemValue="C" />
+		                </p:selectOneMenu>
+		            </f:facet>
+        		<h:outputText value="#{registro.classeCompra}" />
+    		</p:column>
+    		
+    		<p:column style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Compras'))}"
+						headerText="#{bundleMateriais['materiais.datatable.prateleira']}" 
+						sortBy="#{M--PRATELEIRA}" 
+						filterBy="#{M--PRATELEIRA}" 
+						filterStyleClass="filterStyle">
+					<f:facet name="filter">
+						<p:selectOneMenu onchange="PF('uListdt').filter()">
+		                    <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
+		                    <f:selectItem itemValue="1" itemLabel="S"/>
+    						<f:selectItem itemValue="0" itemLabel="N"/>
+		                </p:selectOneMenu>
+		            </f:facet>
+        		<h:outputText value="#{registro.labeledPrateleira}" />
+    		</p:column>
+    		
+    		<p:column  style="width:100px;text-align:center" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}"
+						headerText="#{bundleMateriais['materiais.edit.ncm']}" 
+						sortBy="#{M--NCM}" 
+						filterBy="#{M--NCM}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.ncm}" />
+    		</p:column>
+    		
+    		<p:column  style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}"
+						headerText="#{bundleMateriais['materiais.edit.qtdemat']}" 
+						sortBy="#{M--QTDE_MATERIAL}" 
+						filterBy="#{M--QTDE_MATERIAL}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.qtdeMat}" />
+    		</p:column>
+    		
+    		<p:column style="width:150px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Compras'))}"
+						headerText="#{bundleMateriais['materiais.edit.pnmateria']}" 
+						sortBy="#{M--PN_MATERIAL}" 
+						filterBy="#{M--PN_MATERIAL}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.pnmat}" />
+    		</p:column>
+    		
+    		<p:column style="width:180px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Qualidade'))}"
+						headerText="#{bundleMateriais['materiais.datatable.frequencia']}" 
+						sortBy="#{M--CALIBRACAO}" 
+						filterBy="#{M--CALIBRACAO}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.calibracao}" />
+    		</p:column>
+			
+    		<p:column  style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Qualidade'))}"
+						headerText="#{bundleMateriais['materiais.datatable.vida']}" 
+						sortBy="#{M--VIDA}" 
+						filterBy="#{M--VIDA}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.vida}" />
+    		</p:column>
+			
+    		<p:column  style="width:100px;text-align:center"
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Qualidade'))}"
+						headerText="#{bundleMateriais['materiais.datatable.ambienteControlado']}" 
+						sortBy="#{M--AMBIENTE}" 
+						filterBy="#{M--AMBIENTE}" 
+						filterStyleClass="filterStyle">
+				<f:facet name="filter">
+					<p:selectOneMenu onchange="PF('uListdt').filter()">
+	                    <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
+	                    <f:selectItem itemValue="1" itemLabel="S"/>
+   						<f:selectItem itemValue="0" itemLabel="N"/>
+	                </p:selectOneMenu>
+	            </f:facet>
+        		<h:outputText value="#{registro.labeledAmbienteControlado}" />
+    		</p:column>
+
+			<p:column style="width:200px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Qualidade'))}"
+						headerText="#{bundleMateriais['materiais.datatable.faixa']}" 
+						sortBy="#{M--INDICACAO_DE}" 
+						filterBy="#{M--INDICACAO_DE}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.indicacaoDe}" />
+    		</p:column>
+    		
+    		<p:column style="width:200px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Qualidade'))}"
+						headerText="#{bundleMateriais['materiais.datatable.numero']}" 
+						sortBy="#{M--CICLOS}" 
+						filterBy="#{M--CICLOS}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.ciclos}" />
+    		</p:column>
+    		
+    		<p:column style="width:200px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Compras, Manufatura'))}"
+						headerText="#{bundleMateriais['materiais.datatable.lead']}" 
+						sortBy="#{M--LEAD}" 
+						filterBy="#{M--LEAD}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.lead}" />
+    		</p:column>
+    		
+    		<p:column style="width:200px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Manufatura, Gerente Manufatura'))}"
+						headerText="#{bundleMateriais['materiais.datatable.ciclo']}" 
+						sortBy="#{M--MONTAGEM}" 
+						filterBy="#{M--MONTAGEM}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.montagem}" />
+    		</p:column>
+
+    		<p:column style="width:150px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Manufatura, Gerente Manufatura'))}"
+						headerText="#{bundleMateriais['materiais.datatable.lote']}" 
+						sortBy="#{M--LOTE_M}" 
+						filterBy="#{M--LOTE_M}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.loteM}" />
+    		</p:column>
+
+			<p:column style="width:250px" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Gerente Projeto, Manufatura, Gerente Manufatura'))}"
+						headerText="#{bundleMateriais['materiais.datatable.ulote']}" 
+						sortBy="#{UL--UNIDADE}" 
+						filterBy="#{UL--UNIDADE}" 
+						filterStyleClass="filterStyle">
+        		<h:outputText value="#{registro.unidadeLote}" />
+    		</p:column>
+    		
+    		<p:column style="width:60px;text-align:center" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}" 
+						headerText="#{bundleMateriais['materiais.title.material.liberado.serie']}" 
+						sortBy="#{M--LIBERADO}" 
+						filterBy="#{M--LIBERADO}" 
+						filterStyleClass="filterStyle">
+					<f:facet name="filter">
+						<p:selectOneMenu onchange="PF('uListdt').filter()">
+		                    <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
+		                    <f:selectItem itemValue="1" itemLabel="S"/>
+    						<f:selectItem itemValue="0" itemLabel="N"/>
+		                </p:selectOneMenu>
+		            </f:facet>
+        		<h:outputText value="#{registro.labeledLiberadoSerie}" />
+    		</p:column>
+    		
+    		<p:column style="width:60px;text-align:center" 
+						rendered="#{(sec:ifAreAllGranted('Administrador, Engenharia Geral, Engenharia Material, Projetos, Gerente Projeto, Compras, Qualidade, Manufatura, Gerente Manufatura'))}" 
+						headerText="#{bundleMateriais['materiais.title.material.liberado.prototipo']}" 
+						sortBy="#{M--PROTOTIPO}" 
+						filterBy="#{M--PROTOTIPO}" 
+						filterStyleClass="filterStyle">
+					<f:facet name="filter">
+						<p:selectOneMenu onchange="PF('uListdt').filter()">
+		                    <f:selectItem itemLabel="" itemValue="#{null}" noSelectionOption="true" />
+		                    <f:selectItem itemValue="1" itemLabel="S"/>
+    						<f:selectItem itemValue="0" itemLabel="N"/>
+		                </p:selectOneMenu>
+		            </f:facet>
+        		<h:outputText value="#{registro.labeledPrototipo}" />
+    		</p:column>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

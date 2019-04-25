@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:local="http://br.eximia.local/ui"
+	xmlns:model="http://br.eximia.jsfutils/ui"
+	xmlns:sec="http://br.eximia.security-utils/security-tags">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/template.xhtml">
+		<ui:define name="title">#{bundleLogs['logs.title']}</ui:define>
+		<ui:define name="body">
+			<h:form id="main">
+  				<model:datatable 
+				 id="dtListLog" 
+				 collection="#{logsController.list}" 
+				 sortBy="" 
+				 scrollable="true" 
+				 scrollHeight="150"
+				 header="#{bundleLogs['logs.title']}">
+				 	<p:column style="width:100px"  headerText="#{bundleLogs['logs.datatable.data']}" sortBy="#{registro.data}" filterBy="#{registro.data}" filterStyle="width: 97% !important;">
+				        <h:outputText value="#{registro.data}" >
+							<f:convertDateTime pattern="dd/MM/yyyy"  />
+						</h:outputText>
+				    </p:column>
+				 	<model:column style="width:100px;text-align:center" header="#{bundleLogs['logs.datatable.usuario']}" field="#{registro.usuario}" />
+				 	<model:column style="width:100px;text-align:center" header="#{bundleLogs['logs.datatable.acao']}" field="#{registro.acao.value}" />
+				 	<model:column header="#{bundleLogs['logs.datatable.alvo']}" field="#{registro.target}" />
+				 </model:datatable>
+  			</h:form>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

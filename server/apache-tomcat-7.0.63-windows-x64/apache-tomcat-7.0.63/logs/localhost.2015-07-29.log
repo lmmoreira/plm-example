@@ -1,0 +1,102 @@
+Jul 29, 2015 7:38:02 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:38:02 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:38:02 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@5658afe1')
+Jul 29, 2015 7:39:34 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:39:34 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:39:48 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:39:48 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:39:48 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@69750b53')
+Jul 29, 2015 7:41:22 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:41:22 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:41:46 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:41:46 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:41:46 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@1d7f295e')
+Jul 29, 2015 7:43:20 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:43:20 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:43:29 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:43:29 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:43:29 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@196a4632')
+Jul 29, 2015 7:46:10 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:46:10 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:46:11 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:46:11 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:46:11 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@39addae4')
+Jul 29, 2015 7:46:18 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:46:18 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:46:35 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:46:35 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:46:35 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@102674b7')
+Jul 29, 2015 7:48:58 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:48:58 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:49:52 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:49:52 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:49:52 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@401c6a1d')
+Jul 29, 2015 7:52:06 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: No Spring WebApplicationInitializer types detected on classpath
+Jul 29, 2015 7:52:06 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: Initializing Spring root WebApplicationContext
+Jul 29, 2015 7:52:47 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:52:47 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:52:47 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: Closing Spring root WebApplicationContext
+Jul 29, 2015 7:54:37 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: No Spring WebApplicationInitializer types detected on classpath
+Jul 29, 2015 7:54:37 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: Initializing Spring root WebApplicationContext
+Jul 29, 2015 7:54:56 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:54:56 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:54:57 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@6a64ca3f')
+Jul 29, 2015 7:55:30 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: Closing Spring root WebApplicationContext
+Jul 29, 2015 7:55:55 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:55:55 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()
+Jul 29, 2015 7:57:06 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextInitialized()
+Jul 29, 2015 7:57:06 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextInitialized()
+Jul 29, 2015 7:57:06 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@725857cc')
+Jul 29, 2015 7:57:24 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: SessionListener: contextDestroyed()
+Jul 29, 2015 7:57:24 PM org.apache.catalina.core.ApplicationContext log
+INFORMA합ES: ContextListener: contextDestroyed()

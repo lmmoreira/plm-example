@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head>
+	<title>#{bundleIndex['index.system']}</title>
+	<link rel="SHORTCUT ICON" href="/Imagens/Eximia/logotipo.ico" />
+	<link rel="stylesheet" href="css/novaer.css"></link>
+</h:head>
+<h:body>
+
+	<br/>
+	
+	<f:view contentType="text/html">
+    	<model:authentication mainheaderText="#{bundleIndex['index.system']}" helpText="#{bundleIndex['index.authentication.help']}"/>
+    </f:view>
+</h:body>
+</html>

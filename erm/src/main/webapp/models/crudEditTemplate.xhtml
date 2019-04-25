@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="template.xhtml">
+		<ui:define name="title">#{titleParam}</ui:define>
+		
+		<ui:define name="upperBody">
+			<ui:insert name="beforeBody"/>
+		</ui:define>
+		
+		<ui:define name="body">
+			<model:methodParam name="listAction" value="#{listPageParam}"/>
+			<model:methodParam name="saveAction" value="#{saveAction}"/>
+			<model:methodParam name="resetAction" value="#{resetActionParam}"/>
+			
+			<o:form id="#{prefixParam}Frm" includeRequestParams="true">
+				<h:panelGroup layout="block" id="#{prefixParam}dsp">
+	           		<p:accordionPanel id="#{prefixParam}Ac">
+	               		 <ui:insert name="fields"/>
+	                </p:accordionPanel>
+	               	<br/>
+	                <center>
+	                    <p:commandButton id="btnSave" value="#{bundleCrudEditTemplate['crudEditTemplate.save']}" actionListener="#{saveAction}" action="#{listAction}" disabled="#{disableConfirm}" process="#{saveProcess}"/>
+	               		<p:commandButton value="#{bundleCrudEditTemplate['crudEditTemplate.cancel']}" actionListener="#{resetAction}" action="#{listAction}" immediate="true"/>
+	                </center>
+	                <br/>
+	           	</h:panelGroup>
+			</o:form>
+		</ui:define>
+	 </ui:composition>		
+</h:body>
+</html>

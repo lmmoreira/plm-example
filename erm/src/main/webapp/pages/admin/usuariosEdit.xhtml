@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:local="http://br.eximia.local/ui"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleUsuarios['usuarios.title']}" />
+		<ui:param name="prefixParam" value="uEdt" />
+		<ui:param name="entityParam" value="#{usuariosController.entity}" />
+		<ui:param name="listPageParam" value="usuarios?faces-redirect=true" />
+		<ui:param name="saveAction" value="#{usuariosController.save()}" />
+		<ui:param name="resetActionParam" value="#{usuariosController.reset()}" />
+		<ui:param name="controllerParam" value="#{usuariosController}" />
+		
+		<ui:define name="fields">
+			<p:tab id="tabUsuario" title="#{titleParam}">
+				<div class="ui-fluid">
+					<p:panelGrid columns="4" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleUsuarios['usuarios.edit.nome']}">
+							<p:inputText id="nome" value="#{entityParam.nome}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleUsuarios['usuarios.edit.email']}">
+							<p:inputText styleClass="lowerClass" id="email" value="#{entityParam.email}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleUsuarios['usuarios.edit.usuario']}">
+							<p:inputText id="usuario" value="#{entityParam.usuario}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleUsuarios['usuarios.edit.paswd']}">
+							<p:password id="senha" value="#{entityParam.senha}" redisplay="true" />
+						</model:labeledContent>
+					</p:panelGrid>
+				</div>
+				
+				<h:panelGrid columns="2">
+					<model:labeledContent label="#{bundleUsuarios['usuarios.edit.status']}">
+						<h:panelGrid columns="2" id="check">
+							<p:selectBooleanCheckbox id="status" value="#{entityParam.status}" >
+								<p:ajax event="change" update="uEdtFrm:uEdtAc:check"/> 
+							</p:selectBooleanCheckbox> 
+							<h:outputText value="#{entityParam.labeledStatus}" />
+						</h:panelGrid>
+					</model:labeledContent>
+					<model:labeledContent label="#{bundleUsuarios['usuarios.edit.aprovador']}">
+						<h:panelGrid columns="2" id="checkAprov">
+							<p:selectBooleanCheckbox id="aprovador" value="#{entityParam.aprovador}" >
+								<p:ajax event="change" update="uEdtFrm:uEdtAc:checkAprov"/> 
+							</p:selectBooleanCheckbox> 
+							<h:outputText value="#{entityParam.labeledStatusAproval}" />
+						</h:panelGrid>
+					</model:labeledContent>
+				</h:panelGrid>
+				
+				<h:panelGrid columns="1">
+					<model:labeledContent label="#{bundleUsuarios['usuarios.edit.regras']}">
+						<p:pickList id="regras" value="#{controllerParam.regras}"  
+		             						var="regra"  
+		             						itemLabel="#{regra}"  
+		             						itemValue="#{regra}"
+		             						converter="genericConverter"
+		             						showSourceFilter="true" showTargetFilter="true">
+		             				<f:facet name="sourceCaption">#{bundleUsuarios['usuarios.edit.regras.disponivel']}</f:facet>  
+		     						<f:facet name="targetCaption">#{bundleUsuarios['usuarios.edit.regras.selecionado']}</f:facet>
+		             			</p:pickList> 
+					</model:labeledContent>
+				</h:panelGrid>
+			</p:tab>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

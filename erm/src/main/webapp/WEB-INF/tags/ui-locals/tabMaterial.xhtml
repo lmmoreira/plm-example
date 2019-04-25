@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:model="http://br.eximia.jsfutils/ui">
+
+	<model:methodParam name="listAction" value="#{listPageParam}"/>				
+	<model:methodParam name="aproveAction" value="#{aproveAction}"/>
+	<model:methodParam name="reproveAction" value="#{reproveAction}"/>
+	<model:methodParam name="evoluirAction" value="#{evoluirAction}"/>
+	<model:methodParam name="evoluirNotGenAction" value="#{evoluirNotGenAction}"/>
+	<model:methodParam name="newMessageAction" value="#{newMessageAction}"/>	
+				
+	<p:tab id="tabMaterial" title="#{bundleMateriais['materiais.title.material.material']}">
+		<p:panel id="paMat" header="#{bundleMateriais['materiais.title.material.basico']}">
+			<h:panelGrid columns="2" styleClass="widthTotal">
+				<h:panelGrid columns="6" id="pnButtons">
+					<p:commandButton value="#{bundleMateriais['materiais.edit.aprove']}" rendered="#{material.aprovable}" actionListener="#{aproveAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.aprove']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton value="#{bundleMateriais['materiais.edit.reprove']}" rendered="#{material.aprovable}" actionListener="#{reproveAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.reprove']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton update=":frmMsgRetrabalho" value="#{bundleMateriais['materiais.edit.retrabalhar']}" actionListener="#{newMessageAction}" rendered="#{material.aprovable}" onclick="PF('dlgMsgRetrabalho').show();" ajax="true">
+					</p:commandButton>
+					<p:commandButton value="#{bundleMateriais['materiais.edit.evoluir']}" rendered="#{(material.make and material.aprovado and material.wasGenerated)}" actionListener="#{evoluirAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.evoluir']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton value="#{bundleMateriais['materiais.edit.evoluir']}" rendered="#{(material.make and material.aprovado and (!material.wasGenerated))}" actionListener="#{evoluirNotGenAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.evoluir']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton update=":frmMsgMaterial" process="@this" value="#{bundleMateriais['materiais.edit.mensagemAprovador']}" actionListener="#{newMessageAction}" rendered="#{material.pendente and (!material.new)}" onclick="PF('dlgMsgMaterial').show();" ajax="true">
+					</p:commandButton>
+					<p:commandButton update=":frmMsgs" process="@this"  value="#{bundleMateriais['materiais.edit.listaMensagens']}" rendered="#{!material.new}" onclick="PF('dlgMsgs').show();" ajax="true">
+					</p:commandButton>
+					<p:commandButton value="#{bundleMateriais['materiais.edit.editarSubmeter']}" rendered="#{(material.aprovado or material.cancelado)}" actionListener="#{material.paraPendente()}" action="#{materiaisController.paraPendente()}" ajax="false">
+					</p:commandButton>
+				</h:panelGrid>
+			</h:panelGrid>
+			
+			<h:panelGrid columns="1" id="fullMaterialBodyEditable" class="widthTotal">
+				<ui:include src="baseMaterialEditavel.xhtml" />
+			</h:panelGrid>
+		</p:panel>
+		
+		<br/>
+		
+		<ui:insert name="tabEspecifico"/>
+		
+	</p:tab>
+</ui:composition>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:cc="http://java.sun.com/jsf/composite"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:model="http://br.eximia.jsfutils/ui">
+				
+	<cc:interface>
+        <cc:attribute name="listener" method-signature="void handleFileUpload(org.primefaces.event.FileUploadEvent)" />
+        <cc:attribute name="importacao" />
+        <cc:attribute name="file" />
+    </cc:interface>
+    
+    <cc:implementation>
+    	<h:panelGroup layout="block" styleClass="novaerImportacao">
+			<h:panelGroup layout="block" styleClass="novaerImportacaoGrey">
+				<h:outputText value="#{bundleImportacoes['importacao.download']} - #{cc.attrs.importacao.tipo.value}" />
+			</h:panelGroup>
+			<br/>
+			<h:panelGroup layout="block" styleClass="novaerImportacao">
+				<p:commandButton value="#{bundleImportacoes['importacao.download.button']}" ajax="false" icon="ui-icon-arrowthick-1-s">
+		        	<p:fileDownload value="#{cc.attrs.file}" />
+		    	</p:commandButton>
+			</h:panelGroup>
+		</h:panelGroup>
+    	<br/>
+  		<h:panelGroup layout="block" styleClass="novaerImportacao">
+			<h:panelGroup layout="block" styleClass="novaerImportacaoGrey">
+				<h:outputText value="#{bundleImportacoes['importacao.upload']} - #{cc.attrs.importacao.tipo.value}" />
+			</h:panelGroup>
+			<br/>
+			<h:panelGroup layout="block" styleClass="novaerImportacao">
+				<p:fileUpload fileUploadListener="#{cc.attrs.listener}" mode="advanced" dragDropSupport="true" update="@form" sizeLimit="100000" allowTypes="/(\.|\/)(xls|)$/">
+				</p:fileUpload>
+			</h:panelGroup>
+		</h:panelGroup>
+		<br/>
+		<h:panelGroup layout="block" styleClass="novaerImportacao">
+			<h:panelGroup layout="block" styleClass="novaerImportacaoGrey">
+				<h:outputText value="#{bundleImportacoes['importacao.log.upload']} - #{cc.attrs.importacao.tipo.value}" />
+			</h:panelGroup>
+			<br/>
+			<h:panelGroup id="importationStatus" layout="block" style="padding:10px; border-style:solid;border-width:1px;width:98%;height:100%">
+				<h:panelGrid columns="3">
+					<model:labeledContent label="#{bundleImportacoes['importacao.importacao.data']}">
+						<h:outputText value="#{cc.attrs.importacao.data}" styleClass="importacaoDetalhes" >
+							<f:convertDateTime pattern="dd/MM/yyyy"  />
+						</h:outputText>
+					</model:labeledContent>
+					<model:labeledContent label="#{bundleImportacoes['importacao.importacao.status']}">
+						<h:outputText value="#{cc.attrs.importacao.status}" styleClass="importacaoDetalhes" />
+					</model:labeledContent>
+					<model:labeledContent label="#{bundleImportacoes['importacao.importacao.tipo']}">
+						<h:outputText value="#{cc.attrs.importacao.tipo}" styleClass="importacaoDetalhes" />
+					</model:labeledContent>
+				</h:panelGrid>
+				 <model:datatable 
+				 id="dtListIm" 
+				 collection="#{cc.attrs.importacao.detalhes}" 
+				 sortBy="" 
+				 scrollable="true" scrollHeight="150"
+				 header="#{bundleImportacoes['importacao.datatable.title']}">
+				 	<p:column style="width:100px"  headerText="#{bundleImportacoes['importacao.datatable.data']}" sortBy="#{registro.data}" filterBy="#{registro.data}" filterStyle="width: 97% !important;">
+				        <h:outputText value="#{registro.data}" >
+							<f:convertDateTime pattern="dd/MM/yyyy"  />
+						</h:outputText>
+				    </p:column>
+				 	<model:column header="#{bundleImportacoes['importacao.datatable.mensagem']}" field="#{registro.mensagem}" />
+				 </model:datatable>
+				 
+			</h:panelGroup>
+			<p:poll interval="10" update=":main:importacao:importationStatus" />
+		</h:panelGroup>
+    </cc:implementation>
+</html>  

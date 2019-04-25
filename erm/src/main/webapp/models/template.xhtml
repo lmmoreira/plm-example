@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:model="http://br.eximia.jsfutils/ui"
+      xmlns:sec="http://br.eximia.security-utils/security-tags">
+    <h:head>
+        <title>#{bundleTemplate['template.system.title']}</title>
+        <link rel="SHORTCUT ICON" href="../Imagens/Eximia/logotipo.ico" />
+		<link rel="stylesheet" href="../css/novaer.css"></link>
+		<link rel="stylesheet" href="../../css/novaer.css"></link>
+    </h:head>
+    <h:body>
+        <f:view contentType="text/html">
+            <p:layout fullPage="true">
+                <p:layoutUnit position="north" size="130">
+                	 <p:layout>
+                        <p:layoutUnit position="north" size="70">
+                        	<h:panelGrid columns="2">
+                        		<h:graphicImage value="/Imagens/Eximia/eximia-lg-main.png"/>
+                        		<h:outputLabel styleClass="title">
+                            		<ui:insert name="title"/>
+                        		</h:outputLabel>
+                    		</h:panelGrid>
+                        </p:layoutUnit>
+                        <p:layoutUnit position="center">
+                            <ui:include src="menu.xhtml" />
+                        </p:layoutUnit>
+                    </p:layout>
+                </p:layoutUnit>
+                <p:layoutUnit position="south" size="53">
+                    <h:form prependId="false">
+                        <p:toolbar>
+                            <p:toolbarGroup align="left">
+                                <p:commandButton type="button" value="#{bundleTemplate['template.user']} #{sec:userName()}"/>
+                            </p:toolbarGroup>
+                            <p:toolbarGroup align="right">
+                                <p:commandButton type="button" value="#{bundleTemplate['template.developed']}"/>
+                            </p:toolbarGroup>
+                        </p:toolbar>
+                    </h:form>
+                </p:layoutUnit>
+                <p:layoutUnit position="center">
+                    <h:panelGroup layout="block">
+                    	<p:growl id="growl" autoUpdate="true" showDetail="false"/>
+                    	<ui:insert name="upperBody"/>
+                    	<ui:insert name="body"/>
+                    </h:panelGroup>
+                </p:layoutUnit>
+            </p:layout>
+            
+            <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+ 
+			<p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+			    <h:graphicImage value="/Imagens/ajax-loader.gif" />
+			</p:dialog>
+            
+            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        		<p:commandButton value="#{bundleTemplate['template.confirm.yes']}" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+        		<p:commandButton value="#{bundleTemplate['template.confirm.no']}" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+    		</p:confirmDialog>
+        </f:view>
+    </h:body>
+</html>

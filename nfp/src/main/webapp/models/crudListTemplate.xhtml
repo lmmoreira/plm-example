@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="template.xhtml">
+		<ui:define name="title">#{titleParam}</ui:define>
+		<ui:define name="body">
+			<o:form id="#{prefixParam}Frm" includeRequestParams="true">
+				<model:datatableCrudList 
+					id="#{prefixParam}dt"
+					collection="#{collectionParam}"
+					selection="#{entityParam}"
+					editPage="#{editPageParam}"
+					viewPage="#{viewPageParam}"
+					addAction="#{addActionParam}"
+					deleteAction="#{deleteActionParam}"
+					header="#{header}"
+					lazy="#{lazy}"
+					total="#{total}"
+					renderedView="#{renderedView}"
+					renderedEdit="#{renderedEdit}"
+					visibilityEdit="#{visibilityEdit}"
+					disabledAdd="#{disabledAdd}"
+					disabledDelete="#{disabledDelete}">
+					<ui:insert name="datatableColumns"/>
+				</model:datatableCrudList>
+			</o:form>
+		</ui:define>
+	 </ui:composition>		
+</h:body>
+</html>

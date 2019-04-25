@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:o="http://omnifaces.org/ui"
+	  xmlns:of="http://omnifaces.org/functions"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:model="http://br.eximia.jsfutils/ui"
+      xmlns:sec="http://br.eximia.security-utils/security-tags">
+    <h:head>
+    </h:head>
+    <h:body>
+        <f:view contentType="text/html">
+       		<p:panelGrid id="publicado" columns="2" rendered="#{material.pendente}" styleClass="ui-panelgrid-blank" >
+				<p:selectBooleanCheckbox value="#{entityParam.publicado}">
+				</p:selectBooleanCheckbox>
+				<h:outputLabel style="font-size:11px;color:#444444;font-family:Arial;font-weight:bold;">#{bundleMateriais['materiais.edit.publicado']}</h:outputLabel>
+			</p:panelGrid>
+			
+			<div class="ui-fluid">
+				<p:panelGrid columns="1"  layout="grid" styleClass="ui-panelgrid-blank" >
+					<p:panelGrid columns="1"  layout="grid" styleClass="ui-panelgrid-blank" >
+						<p:panelGrid columns="6" columnClasses="ui-grid-col-2,ui-grid-col-1,ui-grid-col-1,ui-grid-col-3,ui-grid-col-2,ui-grid-col-3" layout="grid" styleClass="ui-panelgrid-blank">
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.programa']}">
+								<p:selectOneMenu disabled="#{material.aprovado}" value="#{material.programa}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{programas}" var="programa" itemLabel="#{programa}" itemValue="#{programa}"/>
+				                          <p:column>
+				                              #{item}
+				                          </p:column>
+				                          <p:ajax event="change" listener="#{material.generateRadical}" update="cEdtFrm:cEdtAc:grdRadicaL"/>
+				                      </p:selectOneMenu>
+							</model:labeledContent>
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.tipo']}">
+								<p:selectOneMenu disabled="#{material.aprovado}" value="#{material.tipo}" var="item">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{tipos}" var="tipo" itemLabel="#{tipo.value}" itemValue="#{tipo}"/>
+				                          <p:column>
+				                              #{item.value}
+				                          </p:column>
+				                          <p:ajax event="change" update="cEdtFrm:cEdtAc:grdFornPai"/>
+				                          <p:ajax event="change" update="cEdtFrm:cEdtAc:grdNovoPNPai"/>  
+				                 </p:selectOneMenu>
+							</model:labeledContent>	
+							<p:panelGrid columns="1" id="grdTecnology" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.tecnologia']}">
+									<h:outputText styleClass="upperCaseClass" value="#{material.categoria.tecnologia}" />
+								</model:labeledContent>
+							</p:panelGrid>
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.categoria']}">
+								<p:selectOneMenu disabled="#{material.aprovado}" value="#{material.categoria}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{categorias}" var="categoria" itemLabel="#{categoria}" itemValue="#{categoria}"/>
+				                          <p:column>
+				                              #{item}
+				                          </p:column>
+				                          <p:ajax event="change" update="cEdtFrm:cEdtAc:grdTecnology"/>
+				                          <p:ajax event="change" update="cEdtFrm:cEdtAc:grdDensidade"/>
+				                      </p:selectOneMenu>
+							</model:labeledContent>
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.status']}">
+								<ui:repeat var="o" value="#{material.aprovadores}" varStatus="aprovadores">
+									<h:outputLabel styleClass="#{material.pendente ? 'pendingLabel' : material.aprovado ? 'aprovedLabel' : 'caceledLabel' }">#{o.usuario} - #{o.status.value} <br/></h:outputLabel>
+								</ui:repeat>
+							</model:labeledContent>	
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.autor']}">
+								<h:outputText value="#{material.criador}" rendered="#{(!(sec:ifAreAllGranted('Administrador, Gerente Projeto')))}" />
+								<p:selectOneMenu 
+										rendered="#{((sec:ifAreAllGranted('Administrador, Gerente Projeto'))) and (!material.new)}"
+										value="#{material.criador}" 
+										var="item" 
+										converter="genericConverter" 
+										filter="true" 
+										filterMatchMode="startsWith">
+			                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+			                          <f:selectItems value="#{usuarios}" var="usuario" itemLabel="#{usuario}" itemValue="#{usuario}"/>
+			                          <p:column>
+			                              #{item}
+			                          </p:column>
+			                    </p:selectOneMenu>
+							</model:labeledContent>
+						</p:panelGrid>
+					</p:panelGrid>
+				</p:panelGrid>
+			</div>
+				
+			<div class="ui-fluid">
+				<p:panelGrid columns="1" id="grdNovoPNPai" layout="grid" styleClass="ui-panelgrid-blank" >
+					<p:panelGrid columns="8" columnClasses="ui-grid-col-3,ui-grid-col-3,ui-grid-col-1,ui-grid-col-3,ui-grid-col-1,ui-grid-col-4,ui-grid-col-1,ui-grid-col-4" id="grdNovoPN" layout="grid" styleClass="ui-panelgrid-blank">
+						<p:panelGrid columns="1" rendered="#{material.make}" layout="grid">
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.ata']}">
+								<p:selectOneMenu disabled="#{material.aprovado}" value="#{material.ataO}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith">
+		                        	<f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+		                          	<f:selectItems value="#{atas}" var="ata" itemLabel="#{ata}" itemValue="#{ata}"/>
+		                          	<p:column>
+		                            	#{item}
+		                          	</p:column>
+		                           	<p:ajax event="change" listener="#{material.generateRadical}" update="cEdtFrm:cEdtAc:grdRadicaL"/>
+		                    	</p:selectOneMenu>
+							</model:labeledContent>
+						</p:panelGrid>
+						<p:panelGrid columns="1" rendered="#{material.make}">	
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.subata']}">
+								<p:selectOneMenu disabled="#{material.aprovado}" value="#{material.subAtaO}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{subatas}" var="subata" itemLabel="#{subata}" itemValue="#{subata}"/>
+				                          <p:column>
+				                              #{item}
+				                          </p:column>
+				                          <p:ajax event="change" listener="#{material.generateRadical}" update="cEdtFrm:cEdtAc:grdRadicaL"/>
+				                      </p:selectOneMenu>
+							</model:labeledContent>
+						</p:panelGrid>
+						<p:panelGrid columns="1" rendered="#{material.make}">
+							<h:panelGrid columns="1" id="grdRadicaL">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.radical']}">
+									<h:outputText styleClass="upperCaseClass" value="#{material.radical}" />
+								</model:labeledContent>
+							</h:panelGrid>
+						</p:panelGrid>
+						<p:panelGrid columns="1" rendered="#{material.make}">
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.traco']}">
+								<p:selectOneMenu disabled="#{material.aprovado}" value="#{material.traco}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{tracos}" var="traco" itemLabel="#{traco}" itemValue="#{traco}"/>
+				                          <p:column>
+				                              #{item}
+				                          </p:column>
+				                      <p:ajax event="change" listener="#{material.generateRadical}" update="cEdtFrm:cEdtAc:grdRadicaL"/>
+				                 </p:selectOneMenu>
+							</model:labeledContent>
+						</p:panelGrid>
+						<p:panelGrid columns="1" rendered="#{material.make}">
+							<h:panelGrid columns="2" style="margin-top:15px">
+								<p:selectBooleanCheckbox id="especular" disabled="#{material.aprovado}" value="#{material.especular}" >
+									<p:ajax event="change" listener="#{material.generateRadical}" update="cEdtFrm:cEdtAc:grdRadicaL"/>
+								</p:selectBooleanCheckbox> 
+								<h:outputText value="#{bundleMateriais['materiais.edit.especular']}" />
+							</h:panelGrid>
+						</p:panelGrid>
+						<p:panelGrid columns="1" rendered="#{material.make}">
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.pnespecular']}">
+								<p:autoComplete emptyMessage="#{bundleMateriais['materiais.edit.autocomplete']}"
+												disabled="#{material.aprovado}"
+												required="false" 
+												id="pnEspecular" 
+												value="#{material.pnEspecular}" 
+												completeMethod="#{controllerParam.getMateriaisCompletePn}"  
+												var="item" itemLabel="#{item.pn}" 
+												converter="genericConverter" 
+												itemValue="#{item}"
+												>
+										<p:ajax event="itemSelect" listener="#{material.generateRadical}" update="cEdtFrm:cEdtAc:grdRadicaL"/>
+								</p:autoComplete>
+							</model:labeledContent>
+						</p:panelGrid>
+						<p:panelGrid columns="1" rendered="#{material.make}">
+							<p:commandButton disabled="#{material.aprovado}" style="width:30px;margin-top:20px" action="#{material.gerarPN}" update="cEdtFrm:cEdtAc:grdPN" icon="ui-icon ui-icon-wrench" title="#{bundleMateriais['materiais.edit.generate.pn']}">
+		            		</p:commandButton>
+						</p:panelGrid>
+						<p:panelGrid columns="1" id="grdPN" >
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.pn']}">
+								<p:inputText value="#{material.pn}" readonly="#{material.aprovado}">
+									<p:ajax event="change" update="cEdtFrm:cEdtAc:grdPN"/>
+								</p:inputText>
+								<h:panelGroup layout="block" styleClass="warningPnDuplication" rendered="#{material.duplicatedPN}">
+									<h:outputText value="#{bundleMateriais['materiais.message.duplicated']}" />
+								</h:panelGroup>
+							</model:labeledContent>
+						</p:panelGrid>
+					</p:panelGrid>
+				</p:panelGrid>
+			</div>
+				
+			<div class="ui-fluid">
+				<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+					<p:panelGrid columns="1" id="grdFornPai" layout="grid" styleClass="ui-panelgrid-blank" >
+						<p:panelGrid columns="3" id="grdForn" layout="grid" styleClass="ui-panelgrid-blank">
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.material']}">
+								<p:inputText value="#{material.material}" readonly="#{material.aprovado}" />
+							</model:labeledContent>	
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.descricaoPT']}">
+								<p:inputText readonly="#{material.aprovado}" value="#{entityParam.descricaoPT}" />
+							</model:labeledContent>
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.fornecedor']}">
+								<p:selectOneMenu disabled="#{material.aprovado}" value="#{material.fornecedor}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith">
+			                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+			                          <f:selectItems value="#{fornecedores}" var="fornecedor" itemLabel="#{fornecedor}" itemValue="#{fornecedor}"/>
+			                          <p:column>
+			                              #{item}
+			                          </p:column>
+			                      </p:selectOneMenu>
+							</model:labeledContent>
+							<h:panelGrid columns="2" rendered="#{material.buy}">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.pnfornecedor']}">
+									<p:inputText disabled="#{material.aprovado}" value="#{material.pnFornecedor}" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.especificacao']}">
+									<p:inputText disabled="#{material.aprovado}" value="#{material.especificacao}" />
+								</model:labeledContent>
+							</h:panelGrid>
+							<h:panelGrid columns="2" >
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.qtdemat']}">
+									<p:inputText readonly="#{material.aprovado}" value="#{entityParam.qtdeMat}" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.ncm']}">
+									<p:inputText readonly="#{material.aprovado}" value="#{entityParam.ncm}" />
+								</model:labeledContent>
+							</h:panelGrid>
+							<h:panelGrid id="grdDensidade" columns="1" rendered="#{material.categoria.tecnologia.materiaPrima}">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.densidade']}">
+									<p:inputText value="#{material.densidade}" disabled="#{material.aprovado}" />
+								</model:labeledContent>
+							</h:panelGrid>
+							<h:panelGrid columns="1">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.aprovadores']}">
+									<p:selectCheckboxMenu disabled="#{material.aprovado}" label="#{bundleMateriais['materiais.edit.aprovadores']}" value="#{material.aprovadores}" converter="genericConverter" var="item" filter="true" filterMatchMode="contains" showCheckbox="true">
+					          			<f:selectItems value="#{material.atualMateriaisAprovadoresComTodosUsuarios}" var="materialAprovador" itemLabel="#{materialAprovador.usuario}" itemValue="#{materialAprovador}"/>
+					          			<p:ajax event="change" update="cEdtFrm:cEdtAc:grdAprovadores"/>  
+					      			</p:selectCheckboxMenu>
+					      			
+					      			<h:panelGrid columns="1" id="grdAprovadores" >
+										<h:outputText value="#{fn:length(material.aprovadores)}" styleClass="notToDisplay"/>
+										<h:outputText styleClass="boldNormal, upperCaseClass" value="#{fn:replace(fn:replace(fn:replace(fn:replace(material.aprovadoresAsUsers, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}"/>	
+									</h:panelGrid>
+								</model:labeledContent>
+							</h:panelGrid>
+							<h:panelGrid columns="1">
+							</h:panelGrid>
+							<h:panelGrid columns="1" id="grdProcesso1" rendered="#{material.make}">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.processoEspecial1']}">
+									<p:selectOneMenu disabled="#{(material.aprovado and (!(sec:ifAreAllGranted('Engenharia Material'))) )   }"  value="#{material.processoEspecial1}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith" style="width: 100%;">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{processos}" var="processo" itemLabel="#{processo}" itemValue="#{processo}"/>
+				                          <p:column>
+				                              #{item}
+				                          </p:column>
+				                      </p:selectOneMenu>
+								</model:labeledContent>
+							</h:panelGrid>
+							<h:panelGrid columns="1" id="grdProcesso2" rendered="#{material.make}">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.processoEspecial2']}">
+									<p:selectOneMenu disabled="#{(material.aprovado and (!(sec:ifAreAllGranted('Engenharia Material'))) )   }"  value="#{material.processoEspecial2}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith" style="width: 100%;">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{processos}" var="processo" itemLabel="#{processo}" itemValue="#{processo}"/>
+				                          <p:column>
+				                              #{item}
+				                          </p:column>
+				                      </p:selectOneMenu>
+								</model:labeledContent>
+							</h:panelGrid>
+							<h:panelGrid columns="1" id="grdProcesso3" rendered="#{material.make}">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.processoEspecial3']}">
+									<p:selectOneMenu disabled="#{(material.aprovado and (!(sec:ifAreAllGranted('Engenharia Material'))) )   }"  value="#{material.processoEspecial3}" var="item" converter="genericConverter" filter="true" filterMatchMode="startsWith" style="width: 100%;">
+				                          <f:selectItem itemValue="" itemLabel="#{bundleGeneral['general.selecione']}" />
+				                          <f:selectItems value="#{processos}" var="processo" itemLabel="#{processo}" itemValue="#{processo}"/>
+				                          <p:column>
+				                              #{item}
+				                          </p:column>
+				                      </p:selectOneMenu>
+								</model:labeledContent>
+							</h:panelGrid>
+						</p:panelGrid>
+					</p:panelGrid>
+				</p:panelGrid>
+			</div>
+				
+			<div class="ui-fluid">
+				<p:panel header="#{bundleMateriais['materiais.title.material.materiaisAlternativos']}">
+					<h:panelGrid columns="3" id="materialInformacaoAlternativa">
+						<model:labeledContent label="#{bundleMateriais['materiais.edit.ncodealternativo']}">
+							<p:autoComplete emptyMessage="#{bundleMateriais['materiais.edit.autocomplete']}" 
+											readonly="#{material.aprovado}"
+											required="false" 
+											id="ncodeAlternativo" 
+											value="#{controllerParam.materialInformacaoAlternativa.ncodeAlternativo}" 
+											completeMethod="#{controllerParam.getMateriaisComplete}"  
+											var="item" itemLabel="#{item.ncode}" 
+											converter="genericConverter" 
+											itemValue="#{item}">
+									<p:ajax event="itemSelect" update="cEdtFrm:cEdtAc:grdIde" listener="#{controllerParam.materialInformacaoAlternativa.configurarMaterial(material)}">
+				                    </p:ajax> 
+							</p:autoComplete>
+						</model:labeledContent>
+						<h:panelGrid columns="2" id="grdIde" >
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.descricaoAlternativa']}">
+								<p:inputText readonly="#{material.aprovado}" value="#{controllerParam.materialInformacaoAlternativa.descricaoAlternativa}" style="width:250px" />
+							</model:labeledContent>
+							
+							<model:labeledContent label="#{bundleMateriais['materiais.edit.pnAlternativo']}">
+								<p:inputText readonly="#{material.aprovado}" value="#{controllerParam.materialInformacaoAlternativa.pnAlternativo}" style="width:250px" />
+							</model:labeledContent>
+						</h:panelGrid>
+						
+						<h:panelGrid columns="2" >
+							<p:commandButton disabled="#{material.aprovado}" value="#{bundleMateriais['materiais.edit.btnAdd']}" update="cEdtFrm:cEdtAc:informacoesAlternativas, cEdtFrm:cEdtAc:materialInformacaoAlternativa" action="#{controllerParam.reinitInformacao}" >
+				                <p:collector value="#{controllerParam.materialInformacaoAlternativa}" addTo="#{material.informacoesAlternativas}" unique="true"/>
+				            </p:commandButton>
+				            <p:commandButton disabled="#{material.aprovado}" value="#{bundleMateriais['materiais.edit.btnLimpar']}" update="cEdtFrm:cEdtAc:materialInformacaoAlternativa" action="#{controllerParam.reinitInformacao}"/>
+			            </h:panelGrid>
+					</h:panelGrid>
+					<p:outputPanel id="informacoesAlternativas">
+				        <p:dataTable value="#{material.informacoesAlternativas}" 
+				        				var="info" 
+				        				id="infosTable"
+				        				emptyMessage="#{bundleDatatable['datatable.empty']}">
+				            <p:column headerText="#{bundleMateriais['materiais.edit.descricaoAlternativa']}">
+				                <h:outputText value="#{info.descricaoAlternativa}" />
+				            </p:column>
+				            <p:column headerText="#{bundleMateriais['materiais.edit.pnAlternativo']}">
+				                <h:outputText value="#{info.pnAlternativo}" />
+				            </p:column>
+				            <p:column styleClass="centeredColumn" headerText="#{bundleMateriais['materiais.edit.acao']}">
+				                <p:commandLink value="#{bundleMateriais['materiais.edit.remover']}" 
+				                				update="cEdtFrm:cEdtAc:informacoesAlternativas" process="cEdtFrm:cEdtAc:informacoesAlternativas">
+				                    <p:collector value="#{info}" removeFrom="#{material.informacoesAlternativas}" unique="true"/>
+				                </p:commandLink>
+				            </p:column>
+				        </p:dataTable>
+				    </p:outputPanel>
+			    </p:panel>
+			</div>
+			
+        </f:view>
+    </h:body>
+</html>

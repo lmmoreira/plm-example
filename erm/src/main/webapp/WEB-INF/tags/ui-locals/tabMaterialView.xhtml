@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:model="http://br.eximia.jsfutils/ui">
+
+	<model:methodParam name="listAction" value="#{listPageParam}"/>				
+	<model:methodParam name="aproveAction" value="#{aproveAction}"/>
+	<model:methodParam name="reproveAction" value="#{reproveAction}"/>	
+	<model:methodParam name="evoluirAction" value="#{evoluirAction}"/>
+	<model:methodParam name="evoluirNotGenAction" value="#{evoluirNotGenAction}"/>
+	<model:methodParam name="newMessageAction" value="#{newMessageAction}"/>
+				
+	<p:tab id="tabMaterial" title="#{bundleMateriais['materiais.title.material.material']}">
+		<p:panel id="paMat" header="#{bundleMateriais['materiais.title.material.basico']}">
+			<h:panelGrid columns="2" styleClass="widthTotal">
+				<h:panelGrid columns="6" id="pnButtons" rendered="#{!param['campo']}">
+					<p:commandButton value="#{bundleMateriais['materiais.edit.aprove']}" rendered="#{material.aprovable}" actionListener="#{aproveAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.aprove']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton value="#{bundleMateriais['materiais.edit.reprove']}" rendered="#{material.aprovable}" actionListener="#{reproveAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.reprove']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton update=":frmMsgRetrabalho" value="#{bundleMateriais['materiais.edit.retrabalhar']}" actionListener="#{newMessageAction}" rendered="#{material.aprovable}" onclick="PF('dlgMsgRetrabalho').show();" ajax="true">
+					</p:commandButton>
+					<p:commandButton update=":frmMsgMaterial" value="#{bundleMateriais['materiais.edit.mensagemAprovador']}" actionListener="#{newMessageAction}" rendered="#{material.pendente and !material.new}" onclick="PF('dlgMsgMaterial').show();" ajax="true">
+					</p:commandButton>
+					<p:commandButton value="#{bundleMateriais['materiais.edit.evoluir']}" rendered="#{(material.make and material.aprovado and material.wasGenerated)}" actionListener="#{evoluirAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.evoluir']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton value="#{bundleMateriais['materiais.edit.evoluir']}" rendered="#{(material.make and material.aprovado and (!material.wasGenerated))}" actionListener="#{evoluirNotGenAction}" action="#{listAction}" ajax="true">
+						<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.evoluir']}" icon="ui-icon-alert" />
+					</p:commandButton>
+					<p:commandButton update=":frmMsgs" value="#{bundleMateriais['materiais.edit.listaMensagens']}" rendered="#{!material.new}" onclick="PF('dlgMsgs').show();" ajax="true">
+					</p:commandButton>
+					<p:commandButton  value="#{bundleMateriais['materiais.edit.editarSubmeter']}" rendered="#{(material.aprovado or material.cancelado)}" actionListener="#{material.paraPendente()}" action="#{materiaisController.paraPendente()}" ajax="false">
+					</p:commandButton>
+				</h:panelGrid>
+			</h:panelGrid>
+			
+			<h:panelGrid columns="1" id="fullMaterialBodyView" rendered="#{!(material.pendente and materiaisController.bParaPendente)}" class="widthTotal">
+				<div class="ui-fluid">
+					<p:panelGrid columns="1"  layout="grid" styleClass="ui-panelgrid-blank" >
+						<p:panelGrid columns="1"  layout="grid" styleClass="ui-panelgrid-blank" >
+							<p:panelGrid columns="6" columnClasses="ui-grid-col-2,ui-grid-col-1,ui-grid-col-1,ui-grid-col-3,ui-grid-col-2,ui-grid-col-3" layout="grid" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.programa']}">
+									<h:outputText value="#{material.programa}" styleClass="upperCaseClass" />
+								</model:labeledContent>	
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.tipo']}">
+									<h:outputText value="#{material.tipo}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.tecnologia']}">
+									<h:outputText value="#{material.categoria.tecnologia}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.categoria']}">
+									<h:outputText value="#{material.categoria}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.status']}">
+									<ui:repeat var="o" value="#{material.aprovadores}" varStatus="aprovadores">
+										<h:outputLabel styleClass="#{material.pendente ? 'pendingLabel' : material.aprovado ? 'aprovedLabel' : 'caceledLabel' }">#{o.usuario} - #{o.status.value} <br/></h:outputLabel>
+									</ui:repeat>
+								</model:labeledContent>		
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.autor']}">
+									<h:outputText value="#{material.criador}" styleClass="upperCaseClass" />
+								</model:labeledContent>	
+							</p:panelGrid>
+						</p:panelGrid>
+					</p:panelGrid>
+				</div>
+				
+				<div class="ui-fluid">
+					<p:panelGrid columns="1" id="grdNovoPNPaiV" layout="grid" styleClass="ui-panelgrid-blank" >
+						<p:panelGrid columns="8" id="grdNovoPNV" columnClasses="ui-grid-col-3,ui-grid-col-3,ui-grid-col-1,ui-grid-col-3,ui-grid-col-1,ui-grid-col-4,ui-grid-col-1,ui-grid-col-4" layout="grid" styleClass="ui-panelgrid-blank">
+							<p:panelGrid columns="1" rendered="#{material.make}" layout="grid">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.ata']}">
+									<h:outputText value="#{material.ataO}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+							</p:panelGrid>
+							<p:panelGrid columns="1" rendered="#{material.make}">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.subata']}">
+									<h:outputText value="#{material.subAtaO}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+							</p:panelGrid>
+							<p:panelGrid columns="1" rendered="#{material.make}">
+								<h:panelGrid columns="1" id="grdRadicaLV" >
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.radical']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.radical}" />
+									</model:labeledContent>
+								</h:panelGrid>
+							</p:panelGrid>
+							<p:panelGrid columns="1" rendered="#{material.make}">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.traco']}">
+									<h:outputText value="#{material.traco}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+							</p:panelGrid>
+							<p:panelGrid columns="1" rendered="#{material.make}">
+								<h:panelGrid columns="2" style="margin-top:15px">
+									<p:selectBooleanCheckbox id="especularV" disabled="true" value="#{material.especular}" >
+									</p:selectBooleanCheckbox> 
+									<h:outputText value="#{bundleMateriais['materiais.edit.especular']}" />
+								</h:panelGrid>
+							</p:panelGrid>
+							<p:panelGrid columns="1" id="grdPNV" >
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.pn']}">
+									<h:outputText value="#{material.pn}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+							</p:panelGrid>
+						</p:panelGrid>
+					</p:panelGrid>
+				</div>
+				
+				<div class="ui-fluid">
+					<p:panelGrid columns="1"  layout="grid" styleClass="ui-panelgrid-blank">
+						<p:panelGrid columns="1" id="grdFornPaiV" layout="grid" styleClass="ui-panelgrid-blank" >
+							<p:panelGrid columns="3" id="grdFornV"  layout="grid" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.material']}">
+									<h:outputText value="#{material.material}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.descricaoPT']}">
+									<h:outputText value="#{material.descricaoPT}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.fornecedor']}">
+									<h:outputText value="#{material.fornecedor}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<h:panelGrid columns="2" rendered="#{material.buy}">
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.pnfornecedor']}">
+											<h:outputText styleClass="upperCaseClass" value="#{material.pnFornecedor}" />
+									</model:labeledContent>
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.especificacao']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.especificacao}" />
+									</model:labeledContent>
+								</h:panelGrid>
+								<h:panelGrid columns="2" >
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.qtdemat']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.qtdeMat}" />
+									</model:labeledContent>
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.ncm']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.ncm}" />
+									</model:labeledContent>
+								</h:panelGrid>
+								<h:panelGrid id="grdDensidadeV" columns="1" rendered="#{material.categoria.tecnologia.materiaPrima}">
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.densidade']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.densidade}" />
+									</model:labeledContent>
+								</h:panelGrid>
+								<h:panelGrid columns="1">
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.aprovadores']}">
+										<h:outputText value="#{fn:length(material.aprovadores)}" styleClass="notToDisplay"/>
+										<h:outputText styleClass="upperCaseClass" value="#{fn:replace(fn:replace(fn:replace(fn:replace(material.aprovadoresAsUsers, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}"/>
+									</model:labeledContent>
+								</h:panelGrid>
+								<h:panelGrid columns="1">
+								</h:panelGrid>
+								<h:panelGrid columns="1" id="grdProcesso1V" rendered="#{material.make}">
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.processoEspecial1']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.processoEspecial1}" />
+									</model:labeledContent>
+								</h:panelGrid>
+								<h:panelGrid columns="1" id="grdProcesso2V" rendered="#{material.make}">
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.processoEspecial2']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.processoEspecial2}" />
+									</model:labeledContent>
+								</h:panelGrid>
+								<h:panelGrid columns="1" id="grdProcesso3V" rendered="#{material.make}">
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.processoEspecial3']}">
+										<h:outputText styleClass="upperCaseClass" value="#{material.processoEspecial3}" />
+									</model:labeledContent>
+								</h:panelGrid>
+							</p:panelGrid>
+						</p:panelGrid>
+					</p:panelGrid>
+				</div>
+				
+				<div class="ui-fluid">
+					<p:panel header="#{bundleMateriais['materiais.title.material.materiaisAlternativos']}">
+						<p:outputPanel id="informacoesAlternativasV">
+					        <p:dataTable value="#{material.informacoesAlternativas}" 
+					        				var="info" 
+					        				id="infosTableV"
+					        				emptyMessage="#{bundleDatatable['datatable.empty']}">
+					            <p:column headerText="#{bundleMateriais['materiais.edit.descricaoAlternativa']}">
+					                <h:outputText value="#{info.descricaoAlternativa}" />
+					            </p:column>
+					            <p:column headerText="#{bundleMateriais['materiais.edit.pnAlternativo']}">
+					                <h:outputText value="#{info.pnAlternativo}" />
+					            </p:column>
+					        </p:dataTable>
+					    </p:outputPanel>
+					</p:panel>
+				</div>
+			</h:panelGrid>
+			
+			<h:panelGrid columns="1" id="fullMaterialBodyEditable" rendered="#{material.pendente and materiaisController.bParaPendente}" class="widthTotal">
+				<ui:include src="baseMaterialEditavel.xhtml" />
+			</h:panelGrid>
+		</p:panel>
+		
+		<br/>
+		
+		<ui:insert name="tabEspecifico"/>
+		
+	</p:tab>
+</ui:composition>

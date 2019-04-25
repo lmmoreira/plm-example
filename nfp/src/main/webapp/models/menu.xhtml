@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:sec="http://br.eximia.security-utils/security-tags">
+    <h:head>
+    </h:head>
+    <h:body>
+        <f:view contentType="text/html">
+			<h:form>  
+			    <p:megaMenu style="width:99%" autoDisplay="true">
+			       <p:menuitem value="#{bundleMenu['menu.home']}" url="/pages/main.xhtml" icon="ui-icon-home" />  	  
+			       <p:submenu label="#{bundleMenu['menu.admin']}" rendered="#{sec:ifAreAnyGranted('Administrador')}" icon="ui-icon-wrench">  
+			           	<p:column>  
+			            	<p:submenu label="#{bundleMenu['menu.security']}" styleClass="head" > 
+			                	<p:menuitem value="#{bundleMenu['menu.usuarios']}" url="/pages/admin/usuarios.xhtml" ajax="false" styleClass="itemMenuWidth"/>
+			                	<p:menuitem value="#{bundleMenu['menu.fornecedores']}" url="/pages/admin/fornecedores.xhtml" ajax="false" styleClass="itemMenuWidth"/>
+			                </p:submenu>
+			            </p:column>
+			        </p:submenu>  
+			        <p:menuitem value="#{bundleMenu['menu.logout']}" url="/logout" icon="ui-icon-close" />  
+			    </p:megaMenu>  
+			</h:form>             
+        </f:view>
+    </h:body>
+</html>

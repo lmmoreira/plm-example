@@ -1,0 +1,11 @@
+novaer.ddns.net
+fernando.sistema
+Fer.1010
+**********************************
+http://localhost/phpmyadmin/
+root
+2u3r892yhr98
+**********************************
+http://localhost:8089/manager/html
+tomcat
+tomcat

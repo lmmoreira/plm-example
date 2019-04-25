@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:local="http://br.eximia.local/ui"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleMateriais['materiais.title']}" />
+		<ui:param name="prefixParam" value="cEdt" />
+		<ui:param name="entityParam" value="#{materiaisController.entity}" />
+		<ui:param name="listPageParam" value="#{empty listStatus ? '/pages/main?faces-redirect=true' : 'materiais.xhtml?status='.concat(listStatus).concat('&amp;faces-redirect=true')}" />
+		<ui:param name="saveAction" value="#{materiaisController.save()}" />
+		<ui:param name="resetActionParam" value="#{materiaisController.reset()}" />
+		<ui:param name="controllerParam" value="#{materiaisController}" />
+		
+		<model:methodParam name="listAction" value="#{listPageParam}"/>
+		
+		<ui:define name="beforeBody">
+			<ui:include src="msgMaterial.xhtml" />
+		</ui:define>
+		
+		<ui:define name="fields">
+			<f:event type="preRenderView" listener="#{navegacaoController.checkStatusSession}" /><f:event type="preRenderView" listener="#{navegacaoController.checkStatusSession}" />
+			<local:tabMaterialView material="#{entityParam}"
+									 categorias="#{controllerParam.categorias}"
+									 programas="#{controllerParam.programas}"
+									 atas="#{controllerParam.atas}"
+									 subatas="#{controllerParam.subAtas}"
+									 tracos="#{controllerParam.tracos}"
+									 usuarios="#{controllerParam.usuarios}"
+									 tipos="#{controllerParam.tipos}"
+									 fornecedores="#{controllerParam.fornecedores}"
+									 processos="#{controllerParam.processos}"
+									 aproveAction="#{controllerParam.aprove()}"
+									 evoluirAction="#{controllerParam.evoluir()}"
+									 evoluirNotGenAction="#{controllerParam.evoluirNotGen()}"
+									 reproveAction="#{controllerParam.reprove()}"
+									 listPageParam="#{listPageParam}">
+			
+				<ui:define name="tabEspecifico">
+					<p:panel id="taProjeto" header="#{bundleMateriais['materiais.title.material.projeto']}" rendered="#{sec:ifAreAllGranted('Administrador, Projetos')}">
+						<div class="ui-fluid">
+							<p:panelGrid columns="1" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.peso']}">
+									<h:outputText value="#{entityParam.peso}">
+										<f:convertNumber minFractionDigits="2" />
+									</h:outputText>
+								</model:labeledContent>
+							</p:panelGrid>
+						</div>
+					</p:panel>
+					
+					<br/>
+					
+					<p:panel id="taManufatura" header="#{bundleMateriais['materiais.title.material.manufatura']}" rendered="#{sec:ifAreAllGranted('Administrador, Manufatura')}">
+						<div class="ui-fluid">
+							<p:panelGrid columns="4"  layout="grid" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.lead']}">
+									<h:outputText styleClass="upperCaseClass" value="#{entityParam.lead} #{bundleMateriais['materiais.edit.simbolo.lead']}">
+									</h:outputText>
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.ciclo.montagem']}">
+									<h:outputText styleClass="upperCaseClass" value="#{entityParam.montagem} #{bundleMateriais['materiais.edit.simbolo.montagem']}"> 
+									</h:outputText> 
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.lote']}">
+									<h:outputText styleClass="upperCaseClass" value="#{entityParam.loteM}" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.unidadesLote']}">
+									<h:outputText styleClass="upperCaseClass" value="#{entityParam.unidadeLote}" />
+								</model:labeledContent>
+							</p:panelGrid>
+						</div>
+					</p:panel>
+					
+					<br/>
+					
+					<p:panel id="taQualidade" header="#{bundleMateriais['materiais.title.material.qualidade']}" rendered="#{sec:ifAreAllGranted('Administrador, Qualidade')}">
+						<div class="ui-fluid">
+							<p:panelGrid columns="6" columnClasses="ui-grid-col-2,ui-grid-col-3,ui-grid-col-4,ui-grid-col-5,ui-grid-col-4,ui-grid-col-1" layout="grid" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.calibracao']}">
+									<h:outputText styleClass="upperCaseClass" value="#{entityParam.calibracao}"/>  
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.vida']}">
+									<h:outputText styleClass="upperCaseClass" value="#{entityParam.vida}" />  
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.ambiente']}">
+									<p:selectBooleanCheckbox disabled="true" value="#{entityParam.ambienteControlado}" /> 
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.ciclos']}">
+									<h:outputText styleClass="upperCaseClass" value="#{entityParam.ciclos}" />
+								</model:labeledContent>
+								<h:panelGrid columns="1">
+									<model:labeledContent label="#{bundleMateriais['materiais.edit.materiaisIndicacao']}">
+			        					<h:outputText id="displayRangeInd" value="De #{entityParam.indicacaoDe} C a #{entityParam.indicacaoA} C"  />
+			        					<p:slider disabled="true" for="txtDeInd, txtAInd" display="displayRangeInd" styleClass="qualitySlider" range="true" displayTemplate="De {min} C a {max} C" minValue="-100" maxValue="100" />
+			   						</model:labeledContent>
+			   						<h:inputHidden id="txtDeInd" value="#{entityParam.indicacaoDe}" />
+							    	<h:inputHidden id="txtAInd" value="#{entityParam.indicacaoA}" />
+			   					</h:panelGrid>
+							    <model:labeledContent label="#{bundleMateriais['materiais.edit.pin']}">
+									<h:outputText value="#{entityParam.numeroPI}" />
+								</model:labeledContent>
+							</p:panelGrid>
+						</div>
+					</p:panel>
+					
+					<br/>
+					
+					<p:panel id="taLiberado" header="#{bundleMateriais['materiais.title.material.liberado.title']}" rendered="#{(sec:ifAreAllGranted('Administrador, Projetos, Gerente Projeto, Compras, Manufatura, Qualidade, Gerente Manufatura')) and entityParam.aprovado }">
+						<div class="ui-fluid">
+							<p:panelGrid columns="4"  layout="grid" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.title.material.liberado.serie']}">
+									<h:panelGrid columns="2" id="checkAprov">
+										<p:selectBooleanCheckbox disabled="true" id="aprovador" value="#{entityParam.liberadoSerie}" >
+										</p:selectBooleanCheckbox> 
+									</h:panelGrid>
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.title.material.liberado.prototipo']}">
+									<h:panelGrid columns="2" id="checkAprovP">
+										<p:selectBooleanCheckbox disabled="true" id="aprovadorP" value="#{entityParam.prototipo}" >
+										</p:selectBooleanCheckbox> 
+									</h:panelGrid>
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.title.material.liberado.aprovadores']}">
+					      			<h:panelGrid columns="1" id="grdAprovadoresCampo" >
+										<h:outputText value="#{fn:length(material.getAprovadoresCampos('LiberadoSerie'))}" styleClass="notToDisplay"/>
+										<ui:repeat var="o" value="#{material.getAprovadoresCampos('LiberadoSerie')}" varStatus="aprovadores">
+											<h:outputLabel styleClass="#{material.pendente ? 'pendingLabel' : material.aprovado ? 'aprovedLabel' : 'caceledLabel' }">#{o.usuario} - #{o.status.value} <br/></h:outputLabel>
+										</ui:repeat>
+									</h:panelGrid>
+								</model:labeledContent>
+								<h:panelGrid columns="2" id="pnButtonsCampo" rendered="#{param['campo'] and material.getCorrenteAprovadoresPendentesCampos('LiberadoSerie')}">
+									<p:commandButton value="#{bundleMateriais['materiais.edit.aprove']}" actionListener="#{controllerParam.aproveCampos(material.getAprovadoresCampos('LiberadoSerie')[0].campo)}" action="#{listAction}" ajax="true">
+										<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.aprove']}" icon="ui-icon-alert" />
+									</p:commandButton>
+									<p:commandButton value="#{bundleMateriais['materiais.edit.reprove']}" actionListener="#{controllerParam.reproveCampos(material.getAprovadoresCampos('LiberadoSerie')[0].campo)}" action="#{listAction}" ajax="true">
+										<p:confirm header="#{bundleMateriais['materiais.edit.confirm']}" message="#{bundleMateriais['materiais.edit.confirm.reprove']}" icon="ui-icon-alert" />
+									</p:commandButton>
+								</h:panelGrid>
+							</p:panelGrid>
+						</div>
+					</p:panel>
+					
+					<br/>
+					
+					<p:panel id="taCompras" header="#{bundleMateriais['materiais.title.material.compras']}" rendered="#{sec:ifAreAllGranted('Administrador, Compras')}">
+						<div class="ui-fluid">
+							<p:panelGrid columns="6" columnClasses="ui-grid-col-2,ui-grid-col-3,ui-grid-col-4,ui-grid-col-5,ui-grid-col-2,ui-grid-col-2" layout="grid" styleClass="ui-panelgrid-blank">
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.unidadeFornecedor']}">
+									<h:outputText value="#{entityParam.unidadeFornecedor}" styleClass="upperCaseClass"/>
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.loteMinimo']}">
+									<h:outputText value="#{entityParam.lote}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.unidadeLoteFornecedor']}">
+									<h:outputText value="#{entityParam.unidadeLoteFornecedor}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.classeCompra']}">
+									<h:outputText value="#{entityParam.classeCompra}" styleClass="upperCaseClass" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.itemPrateleira']}">
+									<p:selectBooleanCheckbox disabled="true" value="#{entityParam.prateleira}" /> 
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.pnmateria']}">
+									<h:outputText value="#{entityParam.pnmat}" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.aplicacao']}">
+									<h:outputText value="#{entityParam.aplicacao}" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.composicao']}">
+									<h:outputText value="#{entityParam.composicao}" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.unArmazenagem']}">
+									<h:outputText value="#{entityParam.unidadeArmazenagem}" />
+								</model:labeledContent>
+								<model:labeledContent label="#{bundleMateriais['materiais.edit.pesoBruto']}">
+									<h:outputText value="#{entityParam.pesoBruto}" />
+								</model:labeledContent>
+							</p:panelGrid>
+						</div>
+					</p:panel>
+				</ui:define>
+			</local:tabMaterialView>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

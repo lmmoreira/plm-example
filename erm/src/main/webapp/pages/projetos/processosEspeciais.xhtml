@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui"
+	xmlns:sec="http://br.eximia.security-utils/security-tags">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudListTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleProcessos['processos.title']}" />
+		<ui:param name="prefixParam" value="uList" />
+		<ui:param name="collectionParam" value="#{processosController.list}" />
+		<ui:param name="entityParam" value="#{processosController.entity}" />
+		<ui:param name="editPageParam" value="processosEspeciaisEdit?faces-redirect=true" />
+		<ui:param name="viewPageParam" value="processosEspeciaisView?faces-redirect=true" />
+		<ui:param name="deleteActionParam" value="#{processosController.delete()}" />
+		<ui:param name="addActionParam" value="#{processosController.add()}" />
+		<ui:param name="renderedView" value="#{(!registro.editavelPeloCriador) or  (sec:ifAreAnyGranted('Projetos, Engenharia Material'))}" />
+		<ui:param name="renderedEdit" value="#{(registro.editavelPeloCriador) and (sec:ifAreAnyGranted('Administrador, Manufatura, Engenharia Geral'))}" />
+		<ui:param name="disabledDelete" value="#{!(sec:ifAreAnyGranted('Administrador'))}" />
+		<ui:param name="disabledAdd" value="#{false}" />
+		<ui:param name="header" value="#{titleParam}" />
+		<ui:define name="datatableColumns">
+			<model:column style="width:60px" header="#{bundleProcessos['processos.datatable.cprocesso']}" field="#{registro.ncode}" />
+			<model:column header="#{bundleProcessos['processos.datatable.processo']}" field="#{registro.processo}" />
+			<model:column header="#{bundleProcessos['processos.datatable.especificacao']}" field="#{registro.especificacao}" />
+			<model:column header="#{bundleProcessos['processos.datatable.texto']}" field="#{registro.texto}" />
+			<model:column header="#{bundleProcessos['processos.datatable.autor']}" field="#{registro.criador}" />
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

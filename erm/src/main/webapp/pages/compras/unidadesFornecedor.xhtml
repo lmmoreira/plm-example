@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui"
+	xmlns:sec="http://br.eximia.security-utils/security-tags">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudListTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleUnidadesFornecedor['unidadesFornecedor.title']}" />
+		<ui:param name="prefixParam" value="uList" />
+		<ui:param name="collectionParam" value="#{unidadesFornecedorController.list}" />
+		<ui:param name="entityParam" value="#{unidadesFornecedorController.entity}" />
+		<ui:param name="editPageParam" value="unidadesFornecedorEdit?faces-redirect=true" />
+		<ui:param name="viewPageParam" value="unidadesFornecedorView?faces-redirect=true" />
+		<ui:param name="deleteActionParam" value="#{unidadesFornecedorController.delete()}" />
+		<ui:param name="addActionParam" value="#{unidadesFornecedorController.add()}" />
+		<ui:param name="renderedView" value="#{(sec:ifAreAnyGranted('Projetos, Qualidade, Manufatura, Engenharia Geral, Engenharia Material, Gerente Projeto, Gerente Manufatura'))}" />
+		<ui:param name="renderedEdit" value="#{(sec:ifAreAnyGranted('Administrador, Compras'))}" />
+		<ui:param name="disabledDelete" value="#{!(sec:ifAreAnyGranted('Administrador'))}" />
+		<ui:param name="header" value="#{titleParam}" />
+		<ui:define name="datatableColumns">
+			<model:column header="#{bundleUnidadesFornecedor['unidadesFornecedor.datatable.unidade']}" field="#{registro.unidade}" />
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

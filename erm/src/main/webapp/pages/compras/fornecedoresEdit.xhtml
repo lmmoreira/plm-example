@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleFornecedores['fornecedores.title']}" />
+		<ui:param name="prefixParam" value="cEdt" />
+		<ui:param name="entityParam" value="#{fornecedoresController.entity}" />
+		<ui:param name="listPageParam" value="#{empty listStatus ? '/pages/main?faces-redirect=true' : 'fornecedores.xhtml?status='.concat(listStatus).concat('&amp;faces-redirect=true')}" />
+		<ui:param name="saveAction" value="#{fornecedoresController.save()}" />
+		<ui:param name="resetActionParam" value="#{fornecedoresController.reset()}" />
+		<ui:param name="controllerParam" value="#{fornecedoresController}" />
+		
+		<ui:define name="beforeBody">
+			<ui:include src="msgFornecedor.xhtml" />
+		</ui:define>
+		
+		<ui:define name="fields">
+			<f:event type="preRenderView" listener="#{navegacaoController.checkStatusSession}" />
+			<p:tab id="tabFornecedor" title="#{titleParam}">
+				<h:panelGrid columns="2" styleClass="widthTotal">
+					<h:panelGrid columns="6">
+						<p:commandButton value="#{bundleFornecedores['fornecedores.edit.aprove']}" rendered="#{entityParam.aprovable}" actionListener="#{controllerParam.aprove()}" action="/pages/main?faces-redirect=true" ajax="true">
+							<p:confirm header="#{bundleFornecedores['fornecedores.edit.confirm']}" message="#{bundleFornecedores['fornecedores.edit.confirm.aprove']}" icon="ui-icon-alert" />
+						</p:commandButton>
+						<p:commandButton value="#{bundleFornecedores['fornecedores.edit.reprove']}" rendered="#{entityParam.aprovable}" actionListener="#{controllerParam.reprove()}" action="/pages/main?faces-redirect=true" ajax="true">
+							<p:confirm header="#{bundleFornecedores['fornecedores.edit.confirm']}" message="#{bundleFornecedores['fornecedores.edit.confirm.reprove']}" icon="ui-icon-alert" />
+						</p:commandButton>
+						<p:commandButton value="#{bundleFornecedores['fornecedores.edit.pendente']}" rendered="#{entityParam.cancelado or entityParam.aprovado}" actionListener="#{controllerParam.topendente()}" action="/pages/main?faces-redirect=true" ajax="true">
+							<p:confirm header="#{bundleFornecedores['fornecedores.edit.confirm']}" message="#{bundleFornecedores['fornecedores.edit.confirm.pendente']}" icon="ui-icon-alert" />
+						</p:commandButton>
+						<p:commandButton update=":frmMsgRetrabalho" value="#{bundleFornecedores['fornecedores.edit.retrabalhar']}" actionListener="#{controllerParam.newMessage()}" rendered="#{entityParam.aprovable}" onclick="PF('dlgMsgRetrabalho').show();" ajax="true">
+						</p:commandButton>
+						<p:commandButton update=":frmMsgFornecedor" process="@this" value="#{bundleFornecedores['fornecedores.edit.mensagemAprovador']}" actionListener="#{controllerParam.newMessage()}" rendered="#{entityParam.pendente and (!entityParam.new)}" onclick="PF('dlgMsgFornecedor').show();" ajax="true">
+						</p:commandButton>
+						<p:commandButton update=":frmMsgs" process="@this"  value="#{bundleFornecedores['fornecedores.edit.listaMensagens']}" rendered="#{!entityParam.new}" onclick="PF('dlgMsgs').show();" ajax="true">
+						</p:commandButton>
+					</h:panelGrid>
+				</h:panelGrid>
+				
+				<h:panelGrid columns="2" rendered="#{entityParam.pendente}">
+					<p:selectBooleanCheckbox value="#{entityParam.publicado}" />
+					<h:outputLabel style="font-size:11px;color:#444444;font-family:Arial;font-weight:bold;">#{bundleFornecedores['fornecedores.edit.publicado']}</h:outputLabel>
+				</h:panelGrid>
+				
+				<div class="ui-fluid">
+					<p:panelGrid columns="4" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.status']}">
+							<ui:repeat var="o" value="#{entityParam.aprovadores}" varStatus="aprovadores">
+								<h:outputLabel styleClass="#{entityParam.pendente ? 'pendingLabel' : fornecedor.aprovado ? 'aprovedLabel' : 'caceledLabel' }">#{o.usuario} - #{o.status.value} <br/></h:outputLabel>
+							</ui:repeat>
+						</model:labeledContent>	
+						
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.autor']}">
+							<h:outputText value="#{entityParam.criador}" />
+						</model:labeledContent>
+						
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.dataCadastro']}">
+							<h:outputText value="#{entityParam.dataCadastro}" >
+								 <f:convertDateTime pattern="dd/MM/yyyy"  />
+							</h:outputText>
+						</model:labeledContent>
+						
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.dataReavaliacao']}">
+							<p:calendar pattern="dd/MM/yyyy" value="#{entityParam.dataReavaliacao}" disabled="#{entityParam.aprovado}" />
+						</model:labeledContent>
+					</p:panelGrid>
+						
+					<p:panelGrid columns="3" layout="grid" styleClass="ui-panelgrid-blank">	
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.fornecedor']}">
+							<p:inputText value="#{entityParam.fornecedor}" disabled="#{entityParam.aprovado}"  />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.cnpj']}">
+							<p:inputMask  value="#{entityParam.cnpj}" mask="99.999.999/9999-99" disabled="#{entityParam.aprovado}"/>
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.contato']}">
+							<p:inputText  value="#{entityParam.contato}" disabled="#{entityParam.aprovado}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.endereco']}">
+							<p:inputText  value="#{entityParam.endereco}" disabled="#{entityParam.aprovado}"  />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.telefone']}">
+							<p:inputText value="#{entityParam.telefone}" disabled="#{entityParam.aprovado}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.email']}">
+							<p:inputText styleClass="lowerClass"  value="#{entityParam.email}" disabled="#{entityParam.aprovado}" />
+						</model:labeledContent>
+					</p:panelGrid>
+					
+					<p:panelGrid columns="4" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.iqf']}">
+							<p:inputNumber value="#{entityParam.iqf}" disabled="#{entityParam.aprovado}">
+								<p:ajax event="change" update="cEdtFrm:cEdtAc:grdIde"/> 
+							</p:inputNumber>
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.iqpf']}">
+							<p:inputNumber value="#{entityParam.iqpf}" disabled="#{entityParam.aprovado}">
+								<p:ajax event="change" update="cEdtFrm:cEdtAc:grdIde"/>
+							</p:inputNumber> 
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.ide']}">
+							<h:panelGrid columns="1" id="grdIde" >
+								<p:inputNumber value="#{entityParam.ide}"  disabled="true"/>
+							</h:panelGrid>  
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.aprovadores']}">
+							<p:selectCheckboxMenu disabled="#{entityParam.aprovado}" label="#{bundleFornecedores['fornecedores.edit.aprovadores']}" value="#{entityParam.aprovadores}" converter="genericConverter" var="item" filter="true" filterMatchMode="contains" showCheckbox="true">
+			          			<f:selectItems value="#{entityParam.atualFornecedoresAprovadoresComTodosUsuarios}" var="fornecedorAprovador" itemLabel="#{fornecedorAprovador.usuario}" itemValue="#{fornecedorAprovador}"/>
+			          			<p:ajax event="change" update="cEdtFrm:cEdtAc:grdAprovadores"/> 
+			      			</p:selectCheckboxMenu>
+			      			<h:panelGrid columns="1" id="grdAprovadores" >
+								<h:outputText value="#{fn:length(entityParam.aprovadores)}" styleClass="notToDisplay"/>
+								<h:outputText styleClass="boldNormal, upperCaseClass" value="#{fn:replace(fn:replace(fn:replace(fn:replace(entityParam.aprovadoresAsUsers, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}"/>	
+							</h:panelGrid>
+						</model:labeledContent>
+					</p:panelGrid>
+					
+					<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.produto']}">
+							<p:inputTextarea disabled="#{entityParam.aprovado}" required="true" requiredMessage="#{bundleFornecedores['fornecedores.edit.produto.required']}" value="#{entityParam.produto}" rows="5" cols="47" autoResize="false" />
+						</model:labeledContent>
+					</p:panelGrid>
+				</div>
+			</p:tab>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleRadicais['radicais.title']}" />
+		<ui:param name="prefixParam" value="cEdt" />
+		<ui:param name="entityParam" value="#{radicaisController.entity}" />
+		<ui:param name="listPageParam" value="radicais?faces-redirect=true" />
+		<ui:param name="saveAction" value="#{radicaisController.save()}" />
+		<ui:param name="resetActionParam" value="#{radicaisController.reset()}" />
+		<ui:param name="controllerParam" value="#{radicaisController}" />
+		<ui:define name="fields">
+			<p:tab id="tabRadicais" title="#{titleParam}">
+				<div class="ui-fluid">
+					<p:panelGrid columns="4" columnClasses="ui-grid-col-4,ui-grid-col-4,ui-grid-col-4,ui-grid-col-4" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleRadicais['radicais.edit.programa']}">
+							<h:outputText value="#{entityParam.programa}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleRadicais['radicais.edit.ata']}">
+							<h:outputText value="#{entityParam.ata}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleRadicais['radicais.edit.subAta']}">
+							<h:outputText value="#{entityParam.subAta}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleRadicais['radicais.edit.radical']}">
+							<h:outputText value="#{entityParam.radical}" />
+						</model:labeledContent>
+					</p:panelGrid>
+				</div>
+			</p:tab>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

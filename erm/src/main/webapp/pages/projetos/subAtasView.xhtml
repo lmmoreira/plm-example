@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleSubAtas['subAtas.title']}" />
+		<ui:param name="prefixParam" value="cEdt" />
+		<ui:param name="entityParam" value="#{subAtasController.entity}" />
+		<ui:param name="listPageParam" value="subAtas?faces-redirect=true" />
+		<ui:param name="saveAction" value="#{subAtasController.save()}" />
+		<ui:param name="resetActionParam" value="#{subAtasController.reset()}" />
+		<ui:param name="controllerParam" value="#{subAtasController}" />
+		<ui:define name="fields">
+			<p:tab id="tabSubAta" title="#{titleParam}">
+				<div class="ui-fluid">
+					<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleSubAtas['subAtas.edit.subata']}">
+							<h:outputText value="#{entityParam.subAta}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleSubAtas['subAtas.edit.descricao']}">
+							<h:outputText value="#{entityParam.descricao}" />
+						</model:labeledContent>
+					</p:panelGrid>
+				</div>
+			</p:tab>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

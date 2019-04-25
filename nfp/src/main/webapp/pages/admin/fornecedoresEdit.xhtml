@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	 xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleFornecedores['fornecedores.title']}" />
+		<ui:param name="prefixParam" value="cEdt" />
+		<ui:param name="entityParam" value="#{fornecedoresController.entity}" />
+		<ui:param name="listPageParam" value="#{empty listStatus ? '/pages/main?faces-redirect=true' : 'fornecedores.xhtml?status='.concat(listStatus).concat('&amp;faces-redirect=true')}" />
+		<ui:param name="saveAction" value="#{fornecedoresController.save()}" />
+		<ui:param name="resetActionParam" value="#{fornecedoresController.reset()}" />
+		<ui:param name="controllerParam" value="#{fornecedoresController}" />
+		
+		<ui:define name="fields">
+			<p:tab id="tabFornecedor" title="#{titleParam}">
+				<h:panelGrid columns="2" styleClass="widthHalf">
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.status']}">
+						<h:outputLabel styleClass="#{entityParam.pendente ? 'pendingLabel' : entityParam.aprovado ? 'aprovedLabel' : 'caceledLabel' }">#{entityParam.status.value}</h:outputLabel>
+					</model:labeledContent>
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.autor']}">
+						<h:outputText value="#{entityParam.criador}" />
+					</model:labeledContent>
+				</h:panelGrid>
+				<h:panelGrid columns="1" styleClass="widthHalf">
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.fornecedor']}">
+						<p:inputText value="#{entityParam.fornecedor}" disabled="#{entityParam.aprovado}" style="width:600px" />
+					</model:labeledContent>
+				</h:panelGrid>
+				<h:panelGrid columns="2" styleClass="widthHalf">
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.cnpj']}">
+						<p:inputMask value="#{entityParam.cnpj}" mask="99.999.999/9999-99" disabled="#{entityParam.aprovado}"/>
+					</model:labeledContent>
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.contato']}">
+						<p:inputText style="width:300px" value="#{entityParam.contato}" disabled="#{entityParam.aprovado}" />
+					</model:labeledContent>
+				</h:panelGrid>
+				<h:panelGrid columns="1" styleClass="widthHalf">
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.endereco']}">
+						<p:inputText style="width:600px" value="#{entityParam.endereco}" disabled="#{entityParam.aprovado}"  />
+					</model:labeledContent>
+				</h:panelGrid>
+				<h:panelGrid columns="3" styleClass="widthHalf">
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.telefone']}">
+						<p:inputText value="#{entityParam.telefone}" disabled="#{entityParam.aprovado}" />
+					</model:labeledContent>
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.dataCadastro']}">
+						<h:outputText value="#{entityParam.dataCadastro}" >
+							 <f:convertDateTime pattern="dd/MM/yyyy"  />
+						</h:outputText>
+					</model:labeledContent>
+				</h:panelGrid>
+					
+				<h:panelGrid columns="1" styleClass="widthHalf">
+					<model:labeledContent label="#{bundleFornecedores['fornecedores.edit.email']}">
+						<p:inputText styleClass="lowerClass" style="width:600px" value="#{entityParam.email}" disabled="#{entityParam.aprovado}" />
+					</model:labeledContent>
+				</h:panelGrid>
+			</p:tab>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

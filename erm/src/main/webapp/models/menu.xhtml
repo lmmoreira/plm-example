@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:sec="http://br.eximia.security-utils/security-tags">
+    <h:head>
+    </h:head>
+    <h:body>
+        <f:view contentType="text/html">
+			<h:form>  
+			    <p:megaMenu style="width:99%" autoDisplay="true">
+			       <p:menuitem value="#{bundleMenu['menu.home']}" url="/pages/main.xhtml" icon="ui-icon-home" />  	  
+			       <p:submenu label="#{bundleMenu['menu.admin']}" rendered="#{sec:ifAreAnyGranted('Administrador')}" icon="ui-icon-wrench">  
+			           	<p:column>  
+			            	<p:submenu label="#{bundleMenu['menu.security']}" styleClass="head" > 
+			                	<p:menuitem value="#{bundleMenu['menu.usuarios']}" url="/pages/admin/usuarios.xhtml" ajax="false" styleClass="itemMenuWidth"/>
+			                	<p:menuitem value="#{bundleMenu['menu.logs']}" url="/pages/admin/logs.xhtml" ajax="false" styleClass="itemMenuWidth"/>
+			                </p:submenu>
+			            </p:column>
+			        </p:submenu>  
+			        <p:submenu label="#{bundleMenu['menu.projetos']}" icon="ui-icon-pencil">  
+			           	<p:column>  
+			            	<p:submenu label="#{bundleMenu['menu.bases']}" styleClass="head"> 
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.tecnologias']}" url="/pages/projetos/tecnologias.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.categorias']}" url="/pages/projetos/categorias.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.processosEspeciais']}" url="/pages/projetos/processosEspeciais.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Manufatura, Engenharia Geral, Engenharia Material')}" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.unidadesProjeto']}" url="/pages/projetos/unidadesProjeto.xhtml" ajax="false" rendered="false" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.programas']}" url="/pages/projetos/programas.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.ata']}" url="/pages/projetos/atas.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.subata']}" url="/pages/projetos/subAtas.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.traco']}" url="/pages/projetos/tracos.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+								<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.radical']}" url="/pages/projetos/radicais.xhtml" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+			                </p:submenu>
+			                <p:submenu label="#{bundleMenu['menu.principal']}" styleClass="head">
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.solicitacoes']}" url="/pages/materiais/materiais.xhtml?status=Pendente" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Manufatura, Qualidade, Compras, Gerente Projeto, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" /> 
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.aprovados']}" url="/pages/materiais/materiais.xhtml?status=Aprovado" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Manufatura, Qualidade, Compras, Gerente Projeto, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.rejeitados']}" url="/pages/materiais/materiais.xhtml?status=Cancelado" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Manufatura, Qualidade, Compras, Gerente Projeto, Gerente Manufatura, Engenharia Geral, Engenharia Material')}" />
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.cadastro']}" actionListener="#{materiaisController.add()}" action="/pages/materiais/materiaisEdit?faces-redirect=true" ajax="false" />
+			                </p:submenu>
+			            </p:column>
+			        </p:submenu>
+			        <p:submenu label="#{bundleMenu['menu.compras']}" icon="ui-icon-cart">  
+			           	<p:column>  
+			            	<p:submenu label="#{bundleMenu['menu.bases']}" styleClass="head"> 
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.fornecedores']}" url="/pages/compras/fornecedores.xhtml?status=Pendente" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Gerente Projeto, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material, Qualidade, Compras')}" />
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.fornecedores.aprovados']}" url="/pages/compras/fornecedores.xhtml?status=Aprovado" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Gerente Projeto, Projetos, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material, Qualidade, Compras')}" />
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.fornecedores.cancelado']}" url="/pages/compras/fornecedores.xhtml?status=Cancelado" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Gerente Projeto, Projetos, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material, Qualidade, Compras')}" />
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.fornecedores.cadastro']}" actionListener="#{fornecedoresController.add()}" action="/pages/compras/fornecedoresEdit?faces-redirect=true" ajax="false" rendered="#{sec:ifAreAnyGranted('Administrador, Projetos, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material, Qualidade, Compras')}" />
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.unidadesFornecedor']}" url="/pages/compras/unidadesFornecedor.xhtml" ajax="false" rendered="#{sec:ifAreAllGranted('Administrador, Compras')}" />
+			                	<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.unidadesLoteFornecedor']}" url="/pages/compras/unidadesLoteFornecedor.xhtml" ajax="false" rendered="#{sec:ifAreAllGranted('Administrador, Compras')}" />
+			                </p:submenu>
+			            </p:column>
+			        </p:submenu>
+			        <p:submenu label="#{bundleMenu['menu.manufatura']}" rendered="#{sec:ifAreAllGranted('Administrador, Manufatura, Compras')}" icon="ui-icon-gear">  
+			           	<p:column>  
+			            	<p:submenu label="#{bundleMenu['menu.bases']}" styleClass="head">
+			            		<p:menuitem styleClass="itemMenuWidth" value="#{bundleMenu['menu.unidadesLote']}" url="/pages/manufatura/unidadesLote.xhtml" ajax="false" rendered="#{sec:ifAreAllGranted('Administrador, Manufatura, Compras')}" /> 
+			                </p:submenu>
+			            </p:column>
+			        </p:submenu>
+			        <p:submenu label="#{bundleMenu['menu.importacao']}" rendered="#{sec:ifAreAnyGranted('Administrador')}" icon="ui-icon-folder-collapsed">  
+			           	<p:column>  
+			            	<p:submenu label="#{bundleMenu['menu.importacao']}" styleClass="head" > 
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.tecnologias']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=Tecnologias" ajax="false" styleClass="itemMenuWidth"/>
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.categorias']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=Categorias" ajax="false" styleClass="itemMenuWidth"/>
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.processo']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=Processos" ajax="false" styleClass="itemMenuWidth"/>
+			                	
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.unidadeFornecedor']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=UnidadesFornecedor" ajax="false" styleClass="itemMenuWidth"/>
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.unidadeLoteFornecedor']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=UnidadesLoteFornecedor" ajax="false" styleClass="itemMenuWidth"/>
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.unidadeLote']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=UnidadesLote" ajax="false" styleClass="itemMenuWidth"/>
+			                
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.fornecedores']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=Fornecedores" ajax="false" styleClass="itemMenuWidth"/>	
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.materiais']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=Materiais" ajax="false" styleClass="itemMenuWidth"/>
+			                	<p:menuitem value="#{bundleMenu['menu.importacao.usuarios']}" url="/pages/importacoes/importacoes.xhtml?tipoImportacao=Usuarios" ajax="false" styleClass="itemMenuWidth"/>
+			                </p:submenu>
+			            </p:column>
+			        </p:submenu> 
+			        <p:menuitem value="#{bundleMenu['menu.logout']}" url="/logout" icon="ui-icon-close" />  
+			    </p:megaMenu>  
+			</h:form>             
+        </f:view>
+    </h:body>
+</html>

@@ -1,0 +1,153 @@
+.ui-inputfield, .ui-datatable-data, .ui-selectonemenu-item, .ui-selectcheckboxmenu-item, .upperCaseClass{
+	TEXT-TRANSFORM: uppercase;
+}
+
+.lowerClass{
+	TEXT-TRANSFORM: lowercase;
+}
+
+.mainHeaderText {
+	font-size: 19px !important;
+}
+
+.widthTotal {
+	width: 100% !important
+}
+
+.widthHalf {
+	width: 50% !important
+}
+
+.ui-widget {
+	font-size: 11px !important;
+	font-family: Tahoma, Geneva, Kalimati, sans-serif !important;
+}
+
+.ui-layout-north {
+	z-index: 20 !important;
+	overflow: visible !important;;
+}
+
+.ui-layout-north .ui-layout-unit-content {
+	overflow: visible !important;
+}
+
+.title {
+	color: #593d53;
+	font-size: 20px;
+}
+
+.qualitySlider {
+	width: 400px;
+}
+
+.pendingLabel {
+	color: green;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+.aprovedLabel {
+	color: blue;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+.caceledLabel {
+	color: red;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+.head {
+	display: none;
+}
+
+.notToDisplay {
+	display: none;
+}
+
+ul.ui-menu-child {
+	width: 200px !important;
+}
+
+.itemMenuWidth {
+	width: 190px !important;
+}
+
+
+.info, .success, .warning, .error, .validation, .warningPnDuplication {
+border: 1px solid;
+padding:10px 3px 8px 50px;
+background-size:25px 25px;
+background-repeat: no-repeat;
+background-position: 10px center;
+}
+
+.warning {
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url('../Imagens/warning.png');
+}
+
+
+.warningPnDuplication {
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url('../Imagens/warning.png');
+}
+
+.novaerImportacao{
+	padding:10px; 
+	border-style:solid;
+	border-width:1px;
+	width:98%;
+	height:100%;
+}
+
+.novaerImportacaoGrey{
+	padding:10px;
+	font-weight: bold;
+	background-color:silver; 
+	border-style:solid;
+	border-width:1px;
+	width:98%;
+	height:100%;
+}
+
+
+.importacaoDetalhes {
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+.boldNormal {
+	font-weight: bold;
+}
+
+.filterStyle{
+	width: 97% !important;
+}
+
+.mainWarnBackgroundPN{
+	background-color:#FCF8E3 !important;	
+}
+
+.mainWarnBackgroundPNMessages{
+	background-color:#00CC66 !important;	
+}
+
+.mainWarnBackgroundForn{
+	background-color:#33CCFF !important;	
+}
+
+.centeredColumn {
+   text-align:center !important;
+}
+
+.ui-selectonemenu {
+	min-width: 0px !important;
+}
+

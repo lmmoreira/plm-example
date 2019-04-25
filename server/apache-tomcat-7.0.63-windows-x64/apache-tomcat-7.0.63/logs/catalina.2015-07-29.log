@@ -1,0 +1,1874 @@
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:37:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:37:55 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:37:55 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:37:56 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:37:58 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:37:58 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:37:58 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 4239 ms
+Jul 29, 2015 7:37:58 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:37:58 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:37:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:38:00 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFORMAÇÕES: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [437] milliseconds.
+Jul 29, 2015 7:38:00 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 2,413 ms
+Jul 29, 2015 7:38:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 1,105 ms
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 210 ms
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 160 ms
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 230 ms
+Jul 29, 2015 7:38:02 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:38:02 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:38:02 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 4529 ms
+Jul 29, 2015 7:39:33 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:39:34 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:39:34 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:39:34 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:39:34 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:39:34 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:39:34 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:39:44 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:39:44 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:39:44 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:39:45 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:39:46 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:39:46 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:39:46 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 2948 ms
+Jul 29, 2015 7:39:46 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:39:46 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:39:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:39:47 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFORMAÇÕES: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [235] milliseconds.
+Jul 29, 2015 7:39:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 1,407 ms
+Jul 29, 2015 7:39:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:39:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 970 ms
+Jul 29, 2015 7:39:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:39:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 190 ms
+Jul 29, 2015 7:39:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:39:49 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 245 ms
+Jul 29, 2015 7:39:49 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:39:49 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 155 ms
+Jul 29, 2015 7:39:49 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:39:49 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:39:49 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 3156 ms
+Jul 29, 2015 7:41:22 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:41:22 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:41:22 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:41:22 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:41:22 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:41:22 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:41:22 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:41:42 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:41:42 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:41:42 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:41:43 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:41:43 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:41:43 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:41:43 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 2900 ms
+Jul 29, 2015 7:41:43 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:41:43 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:41:43 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:41:45 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFORMAÇÕES: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [240] milliseconds.
+Jul 29, 2015 7:41:45 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 1,435 ms
+Jul 29, 2015 7:41:45 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 955 ms
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 210 ms
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 215 ms
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 130 ms
+Jul 29, 2015 7:41:46 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:41:46 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:41:46 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 3136 ms
+Jul 29, 2015 7:43:20 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:43:20 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:43:20 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:43:20 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:43:20 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:43:20 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:43:20 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:43:25 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:43:25 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:43:25 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:43:26 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:43:27 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:43:27 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:43:27 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 2785 ms
+Jul 29, 2015 7:43:27 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:43:27 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:43:27 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:43:28 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFORMAÇÕES: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [230] milliseconds.
+Jul 29, 2015 7:43:28 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 1,453 ms
+Jul 29, 2015 7:43:28 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:43:29 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 1,053 ms
+Jul 29, 2015 7:43:29 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:43:30 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 267 ms
+Jul 29, 2015 7:43:30 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:43:30 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 213 ms
+Jul 29, 2015 7:43:30 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:43:30 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 164 ms
+Jul 29, 2015 7:43:30 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:43:30 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:43:30 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 3314 ms
+Jul 29, 2015 7:46:10 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMAÇÕES: Undeploying context [/host-manager]
+Jul 29, 2015 7:46:10 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMAÇÕES: Undeploying context [/docs]
+Jul 29, 2015 7:46:10 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMAÇÕES: Undeploying context []
+Jul 29, 2015 7:46:10 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMAÇÕES: Undeploying context [/examples]
+Jul 29, 2015 7:46:10 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMAÇÕES: Undeploying context [/manager]
+Jul 29, 2015 7:46:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:46:11 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:11 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:11 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 255 ms
+Jul 29, 2015 7:46:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:46:11 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:11 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:11 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 673 ms
+Jul 29, 2015 7:46:11 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:46:12 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:12 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:12 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 185 ms
+Jul 29, 2015 7:46:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:46:12 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:12 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:12 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 140 ms
+Jul 29, 2015 7:46:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:46:12 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:12 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:12 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 145 ms
+Jul 29, 2015 7:46:18 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:46:18 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:46:18 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:46:18 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:46:18 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:46:18 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:46:18 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:46:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:46:31 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:46:31 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:46:32 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:46:33 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:46:33 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:46:33 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 2754 ms
+Jul 29, 2015 7:46:33 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:46:33 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:46:33 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:46:34 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:34 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:34 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:34 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFORMAÇÕES: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [230] milliseconds.
+Jul 29, 2015 7:46:34 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 1,595 ms
+Jul 29, 2015 7:46:34 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:46:35 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:35 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:35 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:35 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 1,073 ms
+Jul 29, 2015 7:46:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:46:36 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:36 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:36 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 310 ms
+Jul 29, 2015 7:46:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:46:36 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:36 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:36 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 285 ms
+Jul 29, 2015 7:46:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:46:36 PM org.apache.tomcat.jdbc.pool.ConnectionPool init
+GRAVE: Unable to create initial connections of pool.
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:36 PM org.apache.naming.NamingContext lookup
+ADVERTÊNCIA: Unexpected exception resolving reference
+java.sql.SQLException: com.mysql.jdbc.Driver
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:254)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:182)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:701)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:635)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:486)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:144)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:116)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:103)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.createDataSource(DataSourceFactory.java:554)
+	at org.apache.tomcat.jdbc.pool.DataSourceFactory.getObjectInstance(DataSourceFactory.java:242)
+	at org.apache.naming.factory.ResourceFactory.getObjectInstance(ResourceFactory.java:141)
+	at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:321)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:842)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:153)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:830)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:167)
+	at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:1103)
+	at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:682)
+	at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:271)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5419)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:274)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:246)
+	... 32 more
+
+Jul 29, 2015 7:46:36 PM org.apache.catalina.core.NamingContextListener addResource
+ADVERTÊNCIA: Failed to register in JMX: javax.naming.NamingException: com.mysql.jdbc.Driver
+Jul 29, 2015 7:46:36 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 205 ms
+Jul 29, 2015 7:46:36 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:46:37 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:46:37 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 3788 ms
+Jul 29, 2015 7:48:57 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:48:57 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:48:57 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:48:58 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:48:58 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:48:58 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:48:58 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:49:45 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:49:45 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:49:45 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:49:46 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:49:47 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:49:47 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:49:47 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 2926 ms
+Jul 29, 2015 7:49:47 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:49:47 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:49:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:49:48 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:49:51 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFORMAÇÕES: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [260] milliseconds.
+Jul 29, 2015 7:49:51 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 3,930 ms
+Jul 29, 2015 7:49:51 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:49:52 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:49:52 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 1,130 ms
+Jul 29, 2015 7:49:52 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:49:52 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:49:52 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 485 ms
+Jul 29, 2015 7:49:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:49:53 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:49:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 425 ms
+Jul 29, 2015 7:49:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:49:53 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:49:54 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 625 ms
+Jul 29, 2015 7:49:54 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:49:54 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:49:54 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 6767 ms
+Jul 29, 2015 7:51:44 PM org.apache.catalina.startup.HostConfig deployWAR
+INFORMAÇÕES: Deploying web application archive C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm.war
+Jul 29, 2015 7:51:48 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFORMAÇÕES: validateJarFile(C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm\WEB-INF\lib\el-api-2.2.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/el/Expression.class
+Jul 29, 2015 7:52:06 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:52:15 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 5.1.2.Final
+Jul 29, 2015 7:52:15 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:52:16 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:52:22 PM com.sun.faces.config.ConfigureListener contextInitialized
+INFORMAÇÕES: Inicializando Mojarra 2.1.7 (SNAPSHOT 20120206) para o contexto '/erm'
+Jul 29, 2015 7:52:24 PM com.sun.faces.spi.InjectionProviderFactory createInstance
+INFORMAÇÕES: JSF1048: Anotações PostConstruct/PreDestroy presentes.  Os métodos ManagedBeans marcados com essas anotações informarão as anotações processadas.
+Jul 29, 2015 7:52:26 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:52:26 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:52:28 PM org.primefaces.webapp.PostConstructApplicationEventListener processEvent
+INFORMAÇÕES: Running on PrimeFaces 5.2
+Jul 29, 2015 7:52:28 PM com.sun.faces.lifecycle.ELResolverInitPhaseListener populateFacesELResolverForJsp
+INFORMAÇÕES: JSF1027: [null] Os ELResolvers para JSF não foram registrados com o contêiner JSP.
+Jul 29, 2015 7:52:28 PM com.sun.faces.config.WebConfiguration$DeferredParameterLoggingAction log
+ADVERTÊNCIA: JSF1025: [/erm] O parâmetro de inicialização de contexto 'facelets.LIBRARIES' está desaprovado.  A opção continuará configurada, mas use 'javax.faces.FACELETS_LIBRARIES' no futuro.
+Jul 29, 2015 7:52:28 PM com.sun.faces.config.WebConfiguration$DeferredParameterLoggingAction log
+INFORMAÇÕES: JSF1019: [/erm] A opção de configuração 'javax.faces.FACELETS_LIBRARIES' foi REDEFINIDA para '/WEB-INF/ui-locals.taglib.xml'
+Jul 29, 2015 7:52:28 PM org.apache.catalina.startup.HostConfig deployWAR
+INFORMAÇÕES: Deployment of web application archive C:\Users\Leonardo\Downloads\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm.war has finished in 44,085 ms
+Jul 29, 2015 7:52:35 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:52:35 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:52:36 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:52:36 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:52:47 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:52:47 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:52:47 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:52:47 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+GRAVE: The web application [/docs] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+Jul 29, 2015 7:52:47 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+GRAVE: The web application [/erm] created a ThreadLocal with key of type [javax.faces.context.FacesContext$1] (value [javax.faces.context.FacesContext$1@7f1014f9]) and a value of type [com.sun.faces.config.InitFacesContext] (value [com.sun.faces.config.InitFacesContext@78d1289a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+Jul 29, 2015 7:52:48 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:52:48 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:52:48 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:52:48 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:54:22 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:54:22 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:54:22 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:54:23 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:54:23 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:54:23 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:54:23 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 2853 ms
+Jul 29, 2015 7:54:23 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:54:23 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:54:23 PM org.apache.catalina.startup.HostConfig deployWAR
+INFORMAÇÕES: Deploying web application archive D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm.war
+Jul 29, 2015 7:54:25 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFORMAÇÕES: validateJarFile(D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm\WEB-INF\lib\el-api-2.2.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/el/Expression.class
+Jul 29, 2015 7:54:36 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:54:44 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 5.1.2.Final
+Jul 29, 2015 7:54:44 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:54:45 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:54:49 PM com.sun.faces.config.ConfigureListener contextInitialized
+INFORMAÇÕES: Inicializando Mojarra 2.1.7 (SNAPSHOT 20120206) para o contexto '/erm'
+Jul 29, 2015 7:54:51 PM com.sun.faces.spi.InjectionProviderFactory createInstance
+INFORMAÇÕES: JSF1048: Anotações PostConstruct/PreDestroy presentes.  Os métodos ManagedBeans marcados com essas anotações informarão as anotações processadas.
+Jul 29, 2015 7:54:53 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:54:53 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:54:55 PM org.primefaces.webapp.PostConstructApplicationEventListener processEvent
+INFORMAÇÕES: Running on PrimeFaces 5.2
+Jul 29, 2015 7:54:55 PM com.sun.faces.lifecycle.ELResolverInitPhaseListener populateFacesELResolverForJsp
+INFORMAÇÕES: JSF1027: [null] Os ELResolvers para JSF não foram registrados com o contêiner JSP.
+Jul 29, 2015 7:54:55 PM com.sun.faces.config.WebConfiguration$DeferredParameterLoggingAction log
+ADVERTÊNCIA: JSF1025: [/erm] O parâmetro de inicialização de contexto 'facelets.LIBRARIES' está desaprovado.  A opção continuará configurada, mas use 'javax.faces.FACELETS_LIBRARIES' no futuro.
+Jul 29, 2015 7:54:55 PM com.sun.faces.config.WebConfiguration$DeferredParameterLoggingAction log
+INFORMAÇÕES: JSF1019: [/erm] A opção de configuração 'javax.faces.FACELETS_LIBRARIES' foi REDEFINIDA para '/WEB-INF/ui-locals.taglib.xml'
+Jul 29, 2015 7:54:55 PM org.apache.catalina.startup.HostConfig deployWAR
+INFORMAÇÕES: Deployment of web application archive D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm.war has finished in 32,059 ms
+Jul 29, 2015 7:54:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:54:56 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:54:56 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 350 ms
+Jul 29, 2015 7:54:56 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:54:56 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:54:57 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 800 ms
+Jul 29, 2015 7:54:57 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:54:57 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:54:57 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 335 ms
+Jul 29, 2015 7:54:57 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:54:57 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:54:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 750 ms
+Jul 29, 2015 7:54:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:54:58 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:54:58 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 250 ms
+Jul 29, 2015 7:54:58 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:54:58 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:54:58 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 34745 ms
+Jul 29, 2015 7:55:10 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:55:10 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:55:10 PM org.hibernate.validator.internal.xml.ValidationXmlParser unmarshal
+INFO: HV000007: META-INF/validation.xml found. Parsing XML based configuration.
+Jul 29, 2015 7:55:10 PM org.hibernate.validator.internal.xml.ValidationBootstrapParameters setMessageInterpolator
+INFO: HV000004: Using br.eximia.springutils.internationalization.ModelResourceBundleMessageInterpolator as message interpolator.
+Jul 29, 2015 7:55:30 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+GRAVE: The web application [/erm] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+Jul 29, 2015 7:55:38 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMAÇÕES: Undeploying context [/erm]
+Jul 29, 2015 7:55:39 PM org.apache.catalina.startup.ExpandWar deleteDir
+GRAVE: [D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm\WEB-INF\lib] could not be completely deleted. The presence of the remaining files may cause problems
+Jul 29, 2015 7:55:39 PM org.apache.catalina.startup.ExpandWar deleteDir
+GRAVE: [D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm\WEB-INF] could not be completely deleted. The presence of the remaining files may cause problems
+Jul 29, 2015 7:55:39 PM org.apache.catalina.startup.ExpandWar deleteDir
+GRAVE: [D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm] could not be completely deleted. The presence of the remaining files may cause problems
+Jul 29, 2015 7:55:39 PM org.apache.catalina.startup.ExpandWar delete
+GRAVE: [D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm] could not be completely deleted. The presence of the remaining files may cause problems
+Jul 29, 2015 7:55:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm
+Jul 29, 2015 7:55:39 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:55:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\erm has finished in 400 ms
+Jul 29, 2015 7:55:54 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:55:55 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:55:55 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:55:55 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:55:55 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:55:55 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:55:55 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server version:        Apache Tomcat/7.0.63
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server built:          Jun 30 2015 08:08:33 UTC
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Server number:         7.0.63.0
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Name:               Windows 7
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: OS Version:            6.1
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Architecture:          amd64
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Java Home:             C:\Program Files\Java\jdk1.7.0_79\jre
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Version:           1.7.0_79-b15
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: JVM Vendor:            Oracle Corporation
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_BASE:         D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: CATALINA_HOME:         D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.config.file=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\conf\logging.properties
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.endorsed.dirs=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\endorsed
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.base=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Dcatalina.home=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63
+Jul 29, 2015 7:57:00 PM org.apache.catalina.startup.VersionLoggerListener log
+INFORMAÇÕES: Command line argument: -Djava.io.tmpdir=D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\temp
+Jul 29, 2015 7:57:00 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: Loaded APR based Apache Tomcat Native library 1.1.33 using APR version 1.5.1.
+Jul 29, 2015 7:57:00 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMAÇÕES: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+Jul 29, 2015 7:57:01 PM org.apache.catalina.core.AprLifecycleListener initializeSSL
+INFORMAÇÕES: OpenSSL successfully initialized (OpenSSL 1.0.1m 19 Mar 2015)
+Jul 29, 2015 7:57:01 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:57:02 PM org.apache.coyote.AbstractProtocol init
+INFORMAÇÕES: Initializing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:57:02 PM org.apache.catalina.startup.Catalina load
+INFORMAÇÕES: Initialization processed in 3111 ms
+Jul 29, 2015 7:57:02 PM org.apache.catalina.core.StandardService startInternal
+INFORMAÇÕES: Starting service Catalina
+Jul 29, 2015 7:57:02 PM org.apache.catalina.core.StandardEngine startInternal
+INFORMAÇÕES: Starting Servlet Engine: Apache Tomcat/7.0.63
+Jul 29, 2015 7:57:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs
+Jul 29, 2015 7:57:03 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:57:05 PM org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+INFORMAÇÕES: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [240] milliseconds.
+Jul 29, 2015 7:57:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\docs has finished in 2,991 ms
+Jul 29, 2015 7:57:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples
+Jul 29, 2015 7:57:06 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:57:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\examples has finished in 1,145 ms
+Jul 29, 2015 7:57:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager
+Jul 29, 2015 7:57:06 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:57:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\host-manager has finished in 430 ms
+Jul 29, 2015 7:57:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager
+Jul 29, 2015 7:57:07 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:57:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\manager has finished in 635 ms
+Jul 29, 2015 7:57:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deploying web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT
+Jul 29, 2015 7:57:07 PM org.apache.catalina.startup.TldConfig execute
+INFORMAÇÕES: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Jul 29, 2015 7:57:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMAÇÕES: Deployment of web application directory D:\Dropbox\Desenvolvimento\Java\novaer\server\apache-tomcat-7.0.63-windows-x64\apache-tomcat-7.0.63\webapps\ROOT has finished in 365 ms
+Jul 29, 2015 7:57:07 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:57:07 PM org.apache.coyote.AbstractProtocol start
+INFORMAÇÕES: Starting ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:57:07 PM org.apache.catalina.startup.Catalina start
+INFORMAÇÕES: Server startup in 5743 ms
+Jul 29, 2015 7:57:24 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:57:24 PM org.apache.coyote.AbstractProtocol pause
+INFORMAÇÕES: Pausing ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:57:24 PM org.apache.catalina.core.StandardService stopInternal
+INFORMAÇÕES: Stopping service Catalina
+Jul 29, 2015 7:57:24 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+GRAVE: The web application [/docs] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak.
+Jul 29, 2015 7:57:24 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:57:24 PM org.apache.coyote.AbstractProtocol stop
+INFORMAÇÕES: Stopping ProtocolHandler ["ajp-apr-8009"]
+Jul 29, 2015 7:57:24 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["http-apr-8080"]
+Jul 29, 2015 7:57:24 PM org.apache.coyote.AbstractProtocol destroy
+INFORMAÇÕES: Destroying ProtocolHandler ["ajp-apr-8009"]

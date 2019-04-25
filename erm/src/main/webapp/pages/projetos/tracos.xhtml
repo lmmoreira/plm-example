@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui"
+	xmlns:sec="http://br.eximia.security-utils/security-tags">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudListTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleTracos['tracos.title']}" />
+		<ui:param name="prefixParam" value="uList" />
+		<ui:param name="collectionParam" value="#{tracosController.list}" />
+		<ui:param name="entityParam" value="#{tracosController.entity}" />
+		<ui:param name="editPageParam" value="tracosEdit?faces-redirect=true" />
+		<ui:param name="viewPageParam" value="tracosView?faces-redirect=true" />
+		<ui:param name="deleteActionParam" value="#{tracosController.delete()}" />
+		<ui:param name="addActionParam" value="#{tracosController.add()}" />
+		<ui:param name="renderedView" value="#{(sec:ifAreAnyGranted('Projetos, Manufatura, Engenharia Geral, Engenharia Material'))}" />
+		<ui:param name="renderedEdit" value="#{(sec:ifAreAnyGranted('Administrador, Gerente Projeto, Gerente Manufatura'))}" />
+		<ui:param name="disabledDelete" value="#{!(sec:ifAreAnyGranted('Administrador'))}" />
+		<ui:param name="header" value="#{titleParam}" />
+		<ui:define name="datatableColumns">
+			<model:column header="#{bundleTracos['tracos.datatable.traco']}" field="#{registro.traco}" />
+			<model:column header="#{bundleTracos['tracos.datatable.lado']}" field="#{registro.lado.value}" />
+			<model:column header="#{bundleTracos['tracos.datatable.descricao']}" field="#{registro.descricao}" />
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

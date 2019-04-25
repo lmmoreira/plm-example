@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:o="http://omnifaces.org/ui"
+	  xmlns:of="http://omnifaces.org/functions"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:model="http://br.eximia.jsfutils/ui"
+      xmlns:sec="http://br.eximia.security-utils/security-tags">
+    <h:head>
+    </h:head>
+    <h:body>
+        <f:view contentType="text/html">
+        
+        		<ui:param name="material" value="#{materiaisController.entity}" />	
+        		<model:methodParam name="listAction" value="#{listPageParam}"/>
+        
+ 	        	<p:dialog header="#{bundleMateriais['materiais.edit.mensagemAprovador']}" widgetVar="dlgMsgMaterial" modal="false">
+	        			<o:form id="frmMsgMaterial" includeRequestParams="true">
+	        			<h:panelGrid id="msgTo" columns="1" styleClass="widthTotal">
+		        			<h:outputText value="#{bundleMateriais['materiais.edit.mensagemAprovador']}" />
+	    	    			<p:inputTextarea value="#{materiaisController.materialMensagem.mensagem}" required="true" requiredMessage="#{bundleMateriais['materiais.edit.mensagemAprovador.required']}" rows="5" cols="47" autoResize="false" />
+	    	    			<h:outputText value="#{bundleMateriais['materiais.edit.mensagemAprovador.to']}" />
+	    	    			<p:selectCheckboxMenu value="#{materiaisController.materialMensagem.para}" required="true" requiredMessage="#{bundleMateriais['materiais.edit.mensagemAprovador.to.required']}" label="#{bundleMateriais['materiais.edit.aprovadores']}" converter="genericConverter" var="item" filter="true" filterMatchMode="contains" showCheckbox="true">
+			          			<f:selectItems value="#{material.aprovadores}" var="materialAprovador" itemLabel="#{materialAprovador.usuario}" itemValue="#{materialAprovador}"/>
+			          		</p:selectCheckboxMenu>
+			          	</h:panelGrid>
+			          	<center>
+	        				<p:commandButton actionListener="#{materiaisController.sendMessage()}" value="#{bundleMateriais['materiais.edit.mensagemAprovador.enviar']}" oncomplete="if (args &amp;&amp; !args.validationFailed) PF('dlgMsgMaterial').hide();" ajax="true">
+							</p:commandButton>
+							<p:commandButton immediate="true" value="#{bundleMateriais['materiais.edit.mensagemAprovador.enviar.cancelar']}" oncomplete="PF('dlgMsgMaterial').hide();" ajax="true">
+							</p:commandButton>
+						</center>
+						</o:form>
+				</p:dialog>
+			
+			
+			<p:dialog header="#{bundleMateriais['materiais.edit.mensagemAprovador']}" widgetVar="dlgMsgRetrabalho" modal="false">
+        			<o:form id="frmMsgRetrabalho" includeRequestParams="true">
+        			<h:panelGrid id="msgToRework" columns="1" styleClass="widthTotal">
+	        			<h:outputText value="#{bundleMateriais['materiais.edit.mensagemAprovador']}" />
+    	    			<p:inputTextarea value="#{materiaisController.materialMensagem.mensagem}" required="true" requiredMessage="#{bundleMateriais['materiais.edit.mensagemAprovador.required']}" rows="5" cols="47" autoResize="false" />
+		          	</h:panelGrid>
+		          	<center>
+        				<p:commandButton actionListener="#{materiaisController.sendMessageRework()}" value="#{bundleMateriais['materiais.edit.mensagemAprovador.enviar']}" action="#{listAction}" oncomplete="if (args &amp;&amp; !args.validationFailed) PF('dlgMsgRetrabalho').hide();" ajax="true">
+						</p:commandButton>
+						<p:commandButton immediate="true" value="#{bundleMateriais['materiais.edit.mensagemAprovador.enviar.cancelar']}" oncomplete="PF('dlgMsgRetrabalho').hide();" ajax="true">
+						</p:commandButton>
+					</center>
+					</o:form>
+			</p:dialog>
+			
+			<p:dialog header="#{bundleMateriais['materiais.edit.listaMensagens']}" widgetVar="dlgMsgs" modal="false">
+        			<o:form id="frmMsgs" includeRequestParams="true">
+        			<h:panelGrid id="msgs" columns="1" styleClass="widthTotal">
+	        			<model:datatable 
+							 id="dtListMsg" 
+							 collection="#{material.mensagens}" 
+							 sortBy="" 
+							 scrollable="true" scrollHeight="150"
+							 header="#{bundleMateriais['materiais.edit.listaMensagens']}">
+							 	<p:column style="width:100px" headerText="#{bundleMateriais['materiais.edit.listaMensagens.data']}" sortBy="#{registro.dataMensagem}" filterBy="#{registro.dataMensagem}" filterStyle="width: 97% !important;">
+							        <h:outputText value="#{registro.dataMensagem}" >
+										<f:convertDateTime pattern="dd/MM/yyyy"  />
+									</h:outputText>
+							    </p:column>
+							 	<model:column style="width:100px" header="#{bundleMateriais['materiais.edit.listaMensagens.de']}" field="#{registro.origem}" />
+							 	<model:column style="width:100px" header="#{bundleMateriais['materiais.edit.listaMensagens.para']}" field="#{registro.destino}" />
+							 	<p:column style="width:50px; text-align:center" headerText="#{bundleMateriais['materiais.edit.listaMensagens.lido']}" sortBy="#{registro.lido}">
+							        <p:selectBooleanCheckbox value="#{registro.lido}" disabled="true" /> 
+							    </p:column>
+							 	<p:column style="width:100px" headerText="#{bundleMateriais['materiais.edit.listaMensagens.dataLeitura']}" sortBy="#{registro.dataLeitura}" filterBy="#{registro.dataLeitura}" filterStyle="width: 97% !important;">
+							        <h:outputText value="#{registro.dataLeitura}" >
+										<f:convertDateTime pattern="dd/MM/yyyy"  />
+									</h:outputText>
+							    </p:column>
+							 	<model:column header="#{bundleMateriais['materiais.edit.listaMensagens.mensagem']}" field="#{registro.mensagem}" />
+							 </model:datatable>
+		          	</h:panelGrid>
+		          	<center>
+						<p:commandButton immediate="true" value="#{bundleMateriais['materiais.edit.mensagemAprovador.enviar.cancelar']}" oncomplete="PF('dlgMsgs').hide();" ajax="true">
+						</p:commandButton>
+					</center>
+					</o:form>
+			</p:dialog>
+			
+        </f:view>
+    </h:body>
+</html>

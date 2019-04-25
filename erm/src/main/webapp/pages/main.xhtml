@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:o="http://omnifaces.org/ui"
+	  xmlns:of="http://omnifaces.org/functions"
+      xmlns:model="http://br.eximia.jsfutils/ui"
+      xmlns:sec="http://br.eximia.security-utils/security-tags">
+    <h:head>
+    </h:head>
+    <h:body>
+    	<ui:composition template="../models/template.xhtml">
+    		<ui:define name="title">#{bundleMain['main.title']}</ui:define>
+    		<ui:define name="body">
+    			<h:form id="main">
+    				<f:event type="preRenderView" listener="#{mainController.checkFornecedorRevalidacao}" />
+    				
+    				<ui:repeat var="materialMensagem" value="#{mainController.userMessagePendencies}">
+    					<div class="ui-messages ui-widget" >
+    						<div class="ui-messages-warn ui-corner-all mainWarnBackgroundPNMessages">
+    							<a href="#" class="ui-messages-close" onclick="$(this).parent().slideUp();return false;">
+    							<span class="ui-icon ui-icon-close"></span></a><span class="ui-messages-warn-icon"></span>
+    							<ul>
+    								<li>
+    									 <p:commandLink action="materiais/materiaisEdit.xhtml" ajax="false">
+									        <h:outputText styleClass="ui-messages-warn-summary" value="#{materialMensagem}: #{bundleMain['main.pendingMessageMaterial.retrabalho']}" />
+									        <ul>
+									        	<li>
+									        		<h:outputText rendered="#{not empty materialMensagem.mensagensCurrentUser}" styleClass="ui-messages-warn-summary" value="#{bundleMain['main.pendingMessageMaterial.user']}" />
+									        	</li>
+										        <ui:repeat var="mensagem" value="#{materialMensagem.mensagensCurrentUser}">
+										        	<ul>
+										        		<li>
+										       				<h:outputText styleClass="ui-messages-warn-summary" value="#{mensagem.mensagem}" />
+										        		</li>
+										        	</ul>
+										        </ui:repeat>
+									        </ul>
+									        <f:setPropertyActionListener value="#{materialMensagem}" target="#{materiaisController.entity}" />
+									        <f:actionListener binding="#{materiaisController.lerMensagens()}" />
+									     </p:commandLink>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+    				</ui:repeat>
+    				
+    				<ui:repeat var="fornecedorMensagem" value="#{mainController.userMessagePendenciesFornecedores}">
+    					<div class="ui-messages ui-widget" >
+    						<div class="ui-messages-warn ui-corner-all mainWarnBackgroundPNMessages">
+    							<a href="#" class="ui-messages-close" onclick="$(this).parent().slideUp();return false;">
+    							<span class="ui-icon ui-icon-close"></span></a><span class="ui-messages-warn-icon"></span>
+    							<ul>
+    								<li>
+    									 <p:commandLink action="compras/fornecedoresEdit.xhtml" ajax="false">
+									        <h:outputText styleClass="ui-messages-warn-summary" value="#{fornecedorMensagem}: #{bundleMain['main.pendingMessageFornecedor.retrabalho']}" />
+									        <ul>
+									        	<li>
+									        		<h:outputText rendered="#{not empty fornecedorMensagem.mensagensCurrentUser}" styleClass="ui-messages-warn-summary" value="#{bundleMain['main.pendingMessageFornecedor.user']}" />
+									        	</li>
+										        <ui:repeat var="mensagem" value="#{fornecedorMensagem.mensagensCurrentUser}">
+										        	<ul>
+										        		<li>
+										       				<h:outputText styleClass="ui-messages-warn-summary" value="#{mensagem.mensagem}" />
+										        		</li>
+										        	</ul>
+										        </ui:repeat>
+									        </ul>
+									        <f:setPropertyActionListener value="#{fornecedorMensagem}" target="#{fornecedoresController.entity}" />
+									        <f:actionListener binding="#{fornecedoresController.lerMensagens()}" />
+									     </p:commandLink>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+    				</ui:repeat>
+    				
+    				<ui:repeat var="material" value="#{mainController.userMaterialPendencies}">
+    					<div class="ui-messages ui-widget" >
+    						<div class="ui-messages-warn ui-corner-all mainWarnBackgroundPN">
+    							<a href="#" class="ui-messages-close" onclick="$(this).parent().slideUp();return false;">
+    							<span class="ui-icon ui-icon-close"></span></a><span class="ui-messages-warn-icon"></span>
+    							<ul>
+    								<li>
+    									 <p:commandLink action="materiais/materiaisView.xhtml" ajax="false">
+									        <h:outputText styleClass="ui-messages-warn-summary" value="#{material}: #{bundleMain['main.pendingMessageMaterial']}" />
+									        <ul>
+									        	<li>
+									        		<h:outputText rendered="#{not empty material.mensagensCurrentUser}" styleClass="ui-messages-warn-summary" value="#{bundleMain['main.pendingMessageMaterial.user']}" />
+									        	</li>
+										        <ui:repeat var="materialMensagem" value="#{material.mensagensCurrentUser}">
+										        	<ul>
+										        		<li>
+										       				<h:outputText styleClass="ui-messages-warn-summary" value="#{materialMensagem.mensagem}" />
+										        		</li>
+										        	</ul>
+										        </ui:repeat>
+									        </ul>
+									        <f:setPropertyActionListener value="#{material}" target="#{materiaisController.entity}" />
+									        <f:actionListener binding="#{materiaisController.lerMensagens()}" />
+									     </p:commandLink>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+					</ui:repeat>
+					
+					<ui:repeat var="material" value="#{mainController.userMaterialPendenciesCampos}">
+    					<div class="ui-messages ui-widget" >
+    						<div class="ui-messages-warn ui-corner-all mainWarnBackgroundPN">
+    							<a href="#" class="ui-messages-close" onclick="$(this).parent().slideUp();return false;">
+    							<span class="ui-icon ui-icon-close"></span></a><span class="ui-messages-warn-icon"></span>
+    							<ul>
+    								<li>
+    									 <p:commandLink action="materiais/materiaisView.xhtml?faces-redirect=true&amp;campo=true" ajax="false">
+									        <h:outputText styleClass="ui-messages-warn-summary" value="#{material}: #{bundleMain['main.pendingMessageMaterial']}" />
+									        <ul>
+									        	<li>
+									        		<h:outputText styleClass="ui-messages-warn-summary" value="#{bundleMain['main.pendingMessageMaterial.user.campos']}" />
+									        	</li>
+										        <ui:repeat var="materialCampo" value="#{material.aprovadoresCamposCurrentUser}">
+										        	<ul>
+										        		<li>
+										       				<h:outputText styleClass="ui-messages-warn-summary" value="#{materialCampo.campo.value}" />
+										        		</li>
+										        	</ul>
+										        </ui:repeat>
+									        </ul>
+									        <f:setPropertyActionListener value="#{material}" target="#{materiaisController.entity}" />
+									     </p:commandLink>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+					</ui:repeat>
+					
+					<ui:repeat var="fornecedor" value="#{mainController.userFornecedorPendencies}">
+    					<div class="ui-messages ui-widget" >
+    						<div class="ui-messages-warn ui-corner-all mainWarnBackgroundForn">
+    							<a href="#" class="ui-messages-close" onclick="$(this).parent().slideUp();return false;">
+    							<span class="ui-icon ui-icon-close"></span></a><span class="ui-messages-warn-icon"></span>
+    							<ul>
+    								<li>
+    									 <p:commandLink action="compras/fornecedoresView.xhtml" ajax="false">
+    									 <h:outputText styleClass="ui-messages-warn-summary" value="#{fornecedor}: #{bundleMain['main.pendingMessageFornecedor']}" />
+    									 <ul>
+									        	<li>
+									        		<h:outputText rendered="#{not empty fornecedor.mensagensCurrentUser}" styleClass="ui-messages-warn-summary" value="#{bundleMain['main.pendingMessageFornecedor.user']}" />
+									        	</li>
+										        <ui:repeat var="fornecedorMensagem" value="#{fornecedor.mensagensCurrentUser}">
+										        	<ul>
+										        		<li>
+										       				<h:outputText styleClass="ui-messages-warn-summary" value="#{fornecedorMensagem.mensagem}" />
+										        		</li>
+										        	</ul>
+										        </ui:repeat>
+									        </ul>
+									        <f:setPropertyActionListener value="#{fornecedor}" target="#{fornecedoresController.entity}" />
+									        <f:actionListener binding="#{fornecedoresController.lerMensagens()}" />
+									     </p:commandLink>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+					</ui:repeat>
+    			</h:form>
+    		</ui:define>
+        </ui:composition>
+    </h:body>
+</html>

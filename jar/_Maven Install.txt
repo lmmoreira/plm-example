@@ -1,0 +1,4 @@
+mvn install:install-file -DgroupId=br.eximia -DartifactId=spring-utils -Dpackaging=jar -Dversion=1.0-SNAPSHOT -Dfile=spring-utils-1.0-SNAPSHOT.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=br.eximia -DartifactId=security-utils -Dpackaging=jar -Dversion=1.0-SNAPSHOT -Dfile=security-utils-1.0-SNAPSHOT.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=br.eximia -DartifactId=spring-utils -Dpackaging=jar -Dversion=1.0-SNAPSHOT -Dfile=spring-utils-1.0-SNAPSHOT.jar -DgeneratePom=true
+mvn install:install-file -DgroupId=mysql -DartifactId=mysql-connector-java -Dpackaging=jar -Dversion=5.1.33 -Dfile=mysql-connector-java-5.1.33 -DgeneratePom=true

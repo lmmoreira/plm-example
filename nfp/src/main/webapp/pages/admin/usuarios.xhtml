@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:local="http://br.eximia.local/ui"
+	xmlns:model="http://br.eximia.jsfutils/ui"
+	xmlns:sec="http://br.eximia.security-utils/security-tags">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudListTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleUsuarios['usuarios.title']}" />
+		<ui:param name="prefixParam" value="uList" />
+		<ui:param name="collectionParam" value="#{usuariosController.list}" />
+		<ui:param name="entityParam" value="#{usuariosController.entity}" />
+		<ui:param name="editPageParam" value="usuariosEdit?faces-redirect=true" />
+		<ui:param name="deleteActionParam" value="#{usuariosController.delete()}" />
+		<ui:param name="addActionParam" value="#{usuariosController.add()}" />
+		<ui:param name="header" value="#{titleParam}" />
+		<ui:param name="renderedView" value="#{false}" />
+		<ui:param name="renderedEdit" value="#{(sec:ifAreAnyGranted('Administrador'))}" />
+		<ui:param name="disabledDelete" value="#{!(sec:ifAreAnyGranted('Administrador'))}" />
+		<ui:define name="datatableColumns">
+			<model:column header="#{bundleUsuarios['usuarios.datatable.nome']}" field="#{registro.nome}" />
+			<model:column header="#{bundleUsuarios['usuarios.datatable.email']}" field="#{registro.email}" />
+			<model:column header="#{bundleUsuarios['usuarios.datatable.usuario']}" field="#{registro.usuario}" />
+			<model:column header="#{bundleUsuarios['usuarios.datatable.status']}" field="#{registro.labeledStatus}" />
+			<p:column exportable="true" headerText="#{bundleUsuarios['usuarios.datatable.permissoes']}" sortBy="#{fn:replace(fn:replace(fn:replace(fn:replace(registro.regras, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}" filterBy="#{fn:replace(fn:replace(fn:replace(fn:replace(registro.regras, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}" filterStyle="width: 97% !important;">
+				<h:outputText value="#{fn:length(registro.regras)} - " styleClass="notToDisplay"/>
+				<h:outputText value="#{fn:replace(fn:replace(fn:replace(fn:replace(registro.regras, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}"/>
+    		</p:column>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleTracos['tracos.title']}" />
+		<ui:param name="prefixParam" value="cEdt" />
+		<ui:param name="entityParam" value="#{tracosController.entity}" />
+		<ui:param name="listPageParam" value="tracos?faces-redirect=true" />
+		<ui:param name="saveAction" value="#{tracosController.save()}" />
+		<ui:param name="resetActionParam" value="#{tracosController.reset()}" />
+		<ui:param name="controllerParam" value="#{tracosController}" />
+		<ui:define name="fields">
+			<p:tab id="tabTraco" title="#{titleParam}">
+				<div class="ui-fluid">
+					<p:panelGrid columns="3" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleTracos['tracos.edit.traco']}">
+							<h:outputText value="#{entityParam.traco}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleTracos['tracos.edit.lado']}">
+							<h:outputText value="#{entityParam.lado}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleTracos['tracos.edit.descricao']}">
+							<h:outputText value="#{entityParam.descricao}" />
+						</model:labeledContent>
+					</p:panelGrid>
+				</div>
+			</p:tab>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

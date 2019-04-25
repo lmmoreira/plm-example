@@ -1,0 +1,153 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.eximia</groupId>
+    <artifactId>nfp</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>erm</name>
+    <url>http://maven.apache.org</url>
+    
+    <repositories>
+		<repository>  
+		    <id>prime-repo</id>  
+		    <name>PrimeFaces Maven Repository</name>  
+		    <url>http://repository.primefaces.org</url>  
+		    <layout>default</layout>  
+		</repository> 
+	</repositories>
+    
+    <dependencies>
+    
+    	<dependency>
+           	<groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        
+         <dependency>
+		    <groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.33</version>
+			<scope>test</scope>
+		</dependency>
+       
+       	<dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>spring-utils</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>security-utils</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <!--  for remove -->
+        
+        <!-- Start of JUnit and Mockito Dependencies -->
+
+        <dependency>
+            <groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.8</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-java</artifactId>
+	        <version>2.47.1</version>
+	        <scope>test</scope>
+    	</dependency>  
+    	
+    	 <dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-firefox-driver</artifactId>
+	        <version>2.47.1</version>
+	        <scope>test</scope>
+	    </dependency>  
+	    
+	    <dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>2.47.1</version>
+			<scope>test</scope>
+		</dependency>  
+
+        <!-- End of JUnit and Mockito Dependencies -->
+        
+    </dependencies>
+    <build>
+  		<finalName>nfp</finalName>
+        <plugins>
+        	<plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <fork>true</fork>
+                	<!-- <executable>C:\Program Files\Java\jdk1.6.0_45\bin\javac.exe</executable> -->
+                	<executable>C:\Program Files\Java\jdk1.7.0_79\bin\javac.exe</executable>
+                </configuration>
+           	</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.0</version>
+                <configuration>
+                    <port>8081</port>
+                    <path>/${project.build.finalName}</path>
+                    <additionalConfigFilesDir>${basedir}/src/main/tomcat/conf</additionalConfigFilesDir>
+                    <update>true</update>               
+                    <classLoaderClass>org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader</classLoaderClass>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                        <version>1.7.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>jul-to-slf4j</artifactId>
+                        <version>1.7.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                        <version>1.2.17</version>
+                    </dependency>
+                    <dependency>
+					    <groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.33</version>
+					</dependency>
+					<dependency>
+						<groupId>org.springframework.</groupId>
+                        <artifactId>spring-instrument-tomcat</artifactId>
+                        <version>4.1.1.RELEASE</version>
+					</dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>

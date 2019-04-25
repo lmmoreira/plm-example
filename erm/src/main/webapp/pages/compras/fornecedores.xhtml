@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui"
+	xmlns:sec="http://br.eximia.security-utils/security-tags">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudListTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleFornecedores['fornecedores.title.'.concat(param['status'])]}" />
+		<ui:param name="prefixParam" value="uList" />
+		<ui:param name="collectionParam" value="#{fornecedoresController.list}" />
+		<ui:param name="entityParam" value="#{fornecedoresController.entity}" />
+		<ui:param name="editPageParam" value="fornecedoresEdit.xhtml?status=#{listStatus}&amp;faces-redirect=true" />
+		<ui:param name="viewPageParam" value="fornecedoresView.xhtml?status=#{listStatus}&amp;faces-redirect=true" />
+		<ui:param name="deleteActionParam" value="#{fornecedoresController.delete()}" />
+		<ui:param name="visibilityEdit" value="#{true}" />
+		<ui:param name="disabledAdd" value="#{true}" />
+		<ui:param name="addActionParam" value="#{fornecedoresController.add()}" />
+		<ui:param name="renderedView" value="#{( (!registro.editavel) and (sec:ifAreAnyGranted('Administrador, Gerente Projeto')))}" />
+		<ui:param name="renderedEdit" value="#{((registro.editavel) and (sec:ifAreAnyGranted('Administrador, Projetos, Manufatura, Gerente Manufatura, Engenharia Geral, Engenharia Material, Qualidade, Compras')))}" />
+		<ui:param name="disabledDelete" value="#{!(sec:ifAreAnyGranted('Administrador'))}" />
+		<ui:param name="header" value="#{titleParam}" />
+		<ui:define name="datatableColumns">
+			<f:event type="preRenderView" listener="#{navegacaoController.checkStatusSession}" />
+			
+			<p:column headerText="#{bundleFornecedores['fornecedores.datatable.fornecedor']}" 
+						sortBy="#{registro.fornecedor}" 
+						styleClass="centeredColumn" 
+						filterBy="#{registro.fornecedor}" 
+						style="width:400px"
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.fornecedor}"/>
+    		</p:column>
+    		
+    		<p:column headerText="#{bundleFornecedores['fornecedores.datatable.cnpj']}" 
+						sortBy="#{registro.cnpj}" 
+						styleClass="centeredColumn" 
+						filterBy="#{registro.cnpj}" 
+						style="width:200px"
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.cnpj}"/>
+    		</p:column>
+    		
+    		<p:column headerText="#{bundleFornecedores['fornecedores.datatable.contato']}" 
+						sortBy="#{registro.contato}" 
+						style="width:300px"
+						styleClass="centeredColumn" 
+						filterBy="#{registro.contato}" 
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.contato}"/>
+    		</p:column>
+    		
+    		<p:column headerText="#{bundleFornecedores['fornecedores.datatable.email']}" 
+						sortBy="#{registro.email}" 
+						styleClass="centeredColumn" 
+						style="width:400px"
+						filterBy="#{registro.email}" 
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.email}"/>
+    		</p:column>
+    		
+    		<p:column headerText="#{bundleFornecedores['fornecedores.datatable.produto']}" 
+						sortBy="#{registro.produto}" 
+						styleClass="centeredColumn" 
+						style="width:400px"
+						filterBy="#{registro.produto}" 
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.produto}"/>
+    		</p:column>
+			
+			<p:column headerText="#{bundleFornecedores['fornecedores.datatable.iqf']}" 
+						sortBy="#{registro.iqf}" 
+						styleClass="centeredColumn" 
+						filterBy="#{registro.iqf}" 
+						style="width:100px"
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.iqf}">
+        			<f:convertNumber type="number" groupingUsed="true" minFractionDigits="2" pattern="#0.00"/>
+        		</h:outputText>
+    		</p:column>
+    		
+    		<p:column headerText="#{bundleFornecedores['fornecedores.datatable.iqpf']}" 
+						sortBy="#{registro.iqpf}" 
+						styleClass="centeredColumn" 
+						filterBy="#{registro.iqpf}" 
+						style="width:100px"
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.iqpf}">
+        			<f:convertNumber type="number" groupingUsed="true" minFractionDigits="2" pattern="#0.00"/>
+        		</h:outputText>
+    		</p:column>
+    		
+    		<p:column headerText="#{bundleFornecedores['fornecedores.datatable.ide']}" 
+						sortBy="#{registro.ide}"
+						styleClass="centeredColumn" 
+						filterBy="#{registro.ide}" 
+						style="width:100px"
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.ide}">
+        			<f:convertNumber type="number" groupingUsed="true" minFractionDigits="2" pattern="#0.00"/>
+        		</h:outputText>
+    		</p:column>
+    		
+    		<p:column headerText="#{bundleFornecedores['fornecedores.datatable.autor']}" 
+						sortBy="#{registro.criador}" 
+						styleClass="centeredColumn" 
+						style="width:300px"
+						filterBy="#{registro.criador}" 
+						filterStyleClass="filterStyle"
+						filterStyle="width: 97% !important;" filterMatchMode="contains">
+        		<h:outputText value="#{registro.criador}"/>
+    		</p:column>
+    		
+    		<p:column style="width:500px;text-align:center"  exportable="true" headerText="#{bundleFornecedores['fornecedores.datatable.status']}" sortBy="#{fn:replace(fn:replace(fn:replace(fn:replace(registro.aprovadores, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}" filterBy="#{fn:replace(fn:replace(fn:replace(fn:replace(registro.aprovadores, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}" filterStyle="width: 97% !important;">
+				<h:outputText value="#{fn:length(registro.aprovadores)} - " styleClass="notToDisplay"/>
+				<h:outputText value="#{fn:replace(fn:replace(fn:replace(fn:replace(registro.aprovadores, '\\{', ''), '\\}', ''), '\\[', ''), '\\]', '')}"/>
+    		</p:column>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>

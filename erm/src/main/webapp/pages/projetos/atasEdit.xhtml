@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:model="http://br.eximia.jsfutils/ui">
+<h:head/>
+<h:body>
+	<ui:composition template="../../models/crudEditTemplate.xhtml">
+		<ui:param name="titleParam" value="#{bundleAtas['atas.title']}" />
+		<ui:param name="prefixParam" value="cEdt" />
+		<ui:param name="entityParam" value="#{atasController.entity}" />
+		<ui:param name="listPageParam" value="atas?faces-redirect=true" />
+		<ui:param name="saveAction" value="#{atasController.save()}" />
+		<ui:param name="resetActionParam" value="#{atasController.reset()}" />
+		<ui:param name="controllerParam" value="#{atasController}" />
+		<ui:define name="fields">
+			<p:tab id="tabAta" title="#{titleParam}">
+				<div class="ui-fluid">
+					<p:panelGrid columns="2" layout="grid" styleClass="ui-panelgrid-blank">
+						<model:labeledContent label="#{bundleAtas['atas.edit.ata']}">
+							<p:inputText value="#{entityParam.ata}" />
+						</model:labeledContent>
+						<model:labeledContent label="#{bundleAtas['atas.edit.descricao']}">
+							<p:inputText value="#{entityParam.descricao}" />
+						</model:labeledContent>
+					</p:panelGrid>
+				</div>
+			</p:tab>
+		</ui:define>
+	 </ui:composition>
+</h:body>
+</html>
